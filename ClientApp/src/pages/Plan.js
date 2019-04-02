@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+// import images from './images'
 
 class Plan extends Component {
   render() {
@@ -46,6 +47,18 @@ class Plan extends Component {
         <h4>Click 'Pack' to view your local menu options</h4> */}
         </section>
         <section className='mid-container'>Restaurant Images Go Here</section>{' '}
+        <section className='restaurant-gallery'>
+          <article className='seafood-img'>
+            <a href='#'>
+              <img
+                scr='./images/seafoodlogo.jpg'
+                alt='LOGO'
+                width='560'
+                height='560'
+              />{' '}
+            </a>
+          </article>
+        </section>
         <section>
           <button className='step-two' type='submit'>
             Pack
