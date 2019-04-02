@@ -305,10 +305,11 @@ section.container {
 .calendar-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-.calendar {
+/* .calendar {
   width: 90%;
   height: 44rem;
   margin-left: 1.5rem;
@@ -317,7 +318,7 @@ section.container {
   color: rgb(255, 255, 255);
   border-radius: 5%;
   box-shadow: 0 0.25rem 0.25rem 0 rgba(50, 50, 50, 0.4);
-}
+} */
 
 .calendar-header {
   text-align: center;
@@ -331,6 +332,19 @@ p.calendar {
   margin: 0;
   color: rgb(255, 255, 255);
   text-align: center;
+}
+
+.days-rows {
+  display: inline;
+  justify-content: center;
+  align-content: center;
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+
+th {
+  padding: 0.5rem;
+  /* border: 0.25rem solid black; */
 }
 
 .calendar-day {

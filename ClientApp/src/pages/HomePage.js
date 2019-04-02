@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 class HomePage extends Component {
   state = {
     displayPlan: false,
@@ -83,7 +83,13 @@ class HomePage extends Component {
 
         {/* <section className='flex-container'>  */}
         <section className='selector-container'>
-          <button onMouseOver={this.planOnMouseOver}>Plan</button>
+          <Link
+            to='/plan'
+            className='hover-button'
+            onMouseOver={this.planOnMouseOver}
+          >
+            Plan
+          </Link>
           <button onMouseOver={this.packOnMouseOver}>Pack</button>
           <button onMouseOver={this.eatOnMouseOver}>Eat</button>
         </section>
