@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 // import images from './images'
+import seafood from '../images/seafoodlogo.png'
+import veggie from '../images/fancyveglogo.png'
+import sushi from '../images/sushi-logo-vector.png'
+import bakery from '../images/bakerylogo.png'
+import italian from '../images/italianlogo.png'
+import burger from '../images/burgerset.png'
 
 class Plan extends Component {
   render() {
@@ -46,19 +52,40 @@ class Plan extends Component {
           {/* <h3>Select the days you want a LunchBoqs</h3>
         <h4>Click 'Pack' to view your local menu options</h4> */}
         </section>
-        <section className='mid-container'>Restaurant Images Go Here</section>{' '}
+
         <section className='restaurant-gallery'>
           <article className='seafood-img'>
             <a href='#'>
-              <img
-                scr='./images/seafoodlogo.jpg'
-                alt='LOGO'
-                width='560'
-                height='560'
-              />{' '}
+              <img src={seafood} alt='LOGO' width='180' height='180' />
+            </a>
+          </article>
+          <article className='veggie-img'>
+            <a href='#'>
+              <img src={veggie} alt='LOGO' width='180' height='180' />
+            </a>
+          </article>
+          <article className='sushi-img'>
+            <a href='#'>
+              <img src={sushi} alt='LOGO' width='180' height='180' />
+            </a>
+          </article>
+          <article className='bakery-img'>
+            <a href='#'>
+              <img src={bakery} alt='LOGO' width='180' height='180' />
+            </a>
+          </article>
+          <article className='veggie-img'>
+            <a href='#'>
+              <img src={italian} alt='LOGO' width='180' height='180' />
+            </a>
+          </article>
+          <article className='burger-img'>
+            <a href='#'>
+              <img src={burger} alt='LOGO' width='180' height='180' />
             </a>
           </article>
         </section>
+
         <section>
           <button className='step-two' type='submit'>
             Pack

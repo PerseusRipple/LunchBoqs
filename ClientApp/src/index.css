@@ -266,6 +266,8 @@ section.container {
   }
 }
 
+/* Info Textbox Container*/
+
 .info-container {
   display: flex;
   justify-content: center;
@@ -402,13 +404,27 @@ th {
 
 /* Media Queries for Calendar */
 
+/*Restaurant Gallery*/
+
 .restaurant-gallery {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+  flex-direction: row;
+  margin: 1rem;
+  padding: 1rem;
   background-color: rgb(126, 138, 161);
-  border-radius: 5%;
-  margin-top: 1rem;
+}
+.restaurant-gallery article {
+  margin: 0.5rem;
+}
+
+.seafood-img {
+  display: flex;
+  justify-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .pack-header {
