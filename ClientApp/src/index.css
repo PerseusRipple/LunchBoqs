@@ -417,6 +417,8 @@ th {
 }
 .restaurant-gallery article {
   margin: 0.5rem;
+  border: 0.15rem solid gray;
+  border-radius: 5%;
 }
 
 .seafood-img {

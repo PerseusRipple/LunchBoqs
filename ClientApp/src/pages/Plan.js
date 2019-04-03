@@ -59,6 +59,7 @@ class Plan extends Component {
               <img src={seafood} alt='LOGO' width='180' height='180' />
             </a>
           </article>
+
           <article className='veggie-img'>
             <a href='#'>
               <img src={veggie} alt='LOGO' width='180' height='180' />
