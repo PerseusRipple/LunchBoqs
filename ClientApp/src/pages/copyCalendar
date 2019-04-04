@@ -1,0 +1,37 @@
+  <section className='calendar-container'>
+          {/* calendar /*{' '}
+          <section className='calendar'>
+            <table>
+              <thead>
+                <tr className='days-rows'>
+                  <th />
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className='lunch-row'>
+                  <td>Lunch</td>
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                </tr>
+                <tr className='snack-row'>
+                  <td>Snack</td>
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                </tr>
+              </tbody>
+            </table>
+          </section>{' '}
+          */ /* <h3>Select the days you want a LunchBoqs</h3>
+          <h4>Click 'Pack' to view your local menu options</h4> */ //{' '}
+        </section> 

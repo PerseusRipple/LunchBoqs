@@ -303,6 +303,17 @@ section.container {
 @media only screen and (min-width: 992px) {
 }
 
+/* Plan Page*/
+
+.plan-logo {
+  background-image: url('/images/linkedin_banner_image_2.png');
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 0;
+  padding: 0;
+}
+
 /* Calendar */
 .calendar-container {
   display: flex;
@@ -325,14 +336,14 @@ section.container {
 }
 .days-rows th {
   text-align: center;
-  background-color: pink;
+  background-color: #ccc;
   border: 0.25rem solid black;
 }
 .lunch-row td,
 .snack-row td {
   text-align: center;
   padding: 1rem;
-  background-color: aqua;
+  background-color: rgb(201, 190, 174);
   border: 0.25rem solid black;
   width: 7rem;
   height: 4rem;
@@ -494,9 +505,18 @@ h3 {
 
 .menu-gallery article {
   border: 0.25rem solid black;
+  border-radius: 5%;
   margin: 0.5rem;
   padding: 0.75rem;
 }
+
+.menu-calendar {
+  min-height: 24rem;
+}
+
+/* .menu-gallery article button {
+  justify-content: center;
+} */
 
 /*Media Query for Restaurant Page */
 
@@ -514,18 +534,24 @@ h3 {
 
 @media only screen and (min-width: 768px) {
   .restaurant-logo {
-    /* min-height: 28rem; */
   }
 }
 
 @media only screen and (min-width: 992px) {
   .restaurant-logo {
-    /* min-height: 38rem; */
+    min-height: 14rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .restaurant-logo {
-    /* min-height: 44rem; */
+    min-height: 14rem;
+  }
+  /* .seafoodMenu-img img {
+    width: inherit;
+    height: inherit;
+  } */
+  .menu-calendar {
+    /* min-height: 24rem; */
   }
 }

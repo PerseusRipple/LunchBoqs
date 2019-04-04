@@ -22,47 +22,12 @@ class Plan extends Component {
   render() {
     return (
       <section>
-        <nav>
-          <h1 className='calendar-header'>Your LunchBoqs</h1>
-        </nav>
-        <section className='calendar-container'>
-          <section className='calendar'>
-            <table>
-              <thead>
-                <tr className='days-rows'>
-                  <th />
-                  <th>Monday</th>
-                  <th>Tuesday</th>
-                  <th>Wednesday</th>
-                  <th>Thursday</th>
-                  <th>Friday</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className='lunch-row'>
-                  <td>Lunch</td>
-                  <td />
-                  <td />
-                  <td />
-                  <td />
-                  <td />
-                </tr>
-                <tr className='snack-row'>
-                  <td>Snack</td>
-                  <td />
-                  <td />
-                  <td />
-                  <td />
-                  <td />
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          {/* <h3>Select the days you want a LunchBoqs</h3>
-        <h4>Click 'Pack' to view your local menu options</h4> */}
-        </section>
-
+        <header className='plan-logo'>
+          <button className='LogIn' type='submit'>
+            Log In
+          </button>
+        </header>
+        {/* <h1 className='calendar-header'>Your LunchBoqs</h1> */}
         <section className='restaurant-gallery'>
           <article className='seafood-img'>
             <Link to='/restaurant' className='click-button'>
@@ -96,12 +61,13 @@ class Plan extends Component {
             </a>
           </article>
         </section>
-
+        /*{' '}
         {/* <section>
           <button className='step-two' type='submit'>
             Pack
           </button>
-        </section> */}
+        </section>{' '} */}
+        */
       </section>
     )
   }
