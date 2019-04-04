@@ -459,8 +459,73 @@ a:hover {
   background-position: center;
   background-size: cover;
   min-height: 38rem;
-  width: 100%;
+  /* width: 100%; */
+  margin: 0;
 }
 
 .restaurant-logo {
+  background-image: url('/images/linkedin_banner_image_2.png');
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 0;
+  padding: 0;
+}
+.seafoodMenu-img img {
+  margin: 0;
+  padding: 0;
+}
+
+.restaurant-page h1,
+h3 {
+  text-align: center;
+}
+
+.menu-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+
+  padding: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+.menu-gallery article {
+  border: 0.25rem solid black;
+  margin: 0.5rem;
+  padding: 0.75rem;
+}
+
+/*Media Query for Restaurant Page */
+
+@media screen and (max-width: 600px) {
+  .restaurant-logo {
+    /* min-height: 16rem; */
+  }
+}
+
+@media only screen and (min-width: 611px) {
+  .restaurant-logo {
+    /* min-height: 23rem; */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .restaurant-logo {
+    /* min-height: 28rem; */
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .restaurant-logo {
+    /* min-height: 38rem; */
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .restaurant-logo {
+    /* min-height: 44rem; */
+  }
 }
