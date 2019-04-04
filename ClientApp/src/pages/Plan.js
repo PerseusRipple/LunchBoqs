@@ -9,6 +9,16 @@ import italian from '../images/italianlogo.png'
 import burger from '../images/burgerset.png'
 
 class Plan extends Component {
+  state = {
+    displayRestaurant: true
+  }
+
+  menuOnClick = () => {
+    this.setState({
+      displayRestaurant: true
+    })
+  }
+
   render() {
     return (
       <section>
@@ -55,9 +65,9 @@ class Plan extends Component {
 
         <section className='restaurant-gallery'>
           <article className='seafood-img'>
-            <a href='#'>
+            <Link to='/restaurant' className='click-button'>
               <img src={seafood} alt='LOGO' width='180' height='180' />
-            </a>
+            </Link>
           </article>
 
           <article className='veggie-img'>
@@ -87,11 +97,11 @@ class Plan extends Component {
           </article>
         </section>
 
-        <section>
+        {/* <section>
           <button className='step-two' type='submit'>
             Pack
           </button>
-        </section>
+        </section> */}
       </section>
     )
   }

@@ -33,7 +33,7 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div>
+      <section>
         <header>
           <section className='topnav'>
             <section className='login-container'>
@@ -135,7 +135,7 @@ class HomePage extends Component {
         {/* <footer className='footer'>© LunchBoqs™ 2019</footer> */}
         {/* <Plan />
         <Pack /> */}
-      </div>
+      </section>
     )
   }
 }
