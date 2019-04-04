@@ -18,11 +18,89 @@ class Restaurant extends Component {
           <h1>Choose your meal.</h1>
           <h3> Tell us when to deliver your LunchBoqs</h3>
           <section className='menu-gallery'>
-            <article>LunchBoqs 1</article>
-            <article>LunchBoqs 2</article>
-            <article>LunchBoqs 3</article>
-            <article>LunchBoqs 4</article>
-            <article>LunchBoqs 5</article>
+            <article>
+              <button>LunchBoqs 1</button>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <select className='days'>
+                <option value='Monday'>Monday</option>
+                <option value='Tuesday'>Tuesday</option>
+                <option value='Wednesday'>Wednesday</option>
+                <option value='Thursday'>Thursday</option>
+                <option value='Friday'>Friday</option>
+              </select>
+            </article>
+
+            <article>
+              <button>LunchBoqs 2</button>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <select className='days'>
+                <option value='Monday'>Monday</option>
+                <option value='Tuesday'>Tuesday</option>
+                <option value='Wednesday'>Wednesday</option>
+                <option value='Thursday'>Thursday</option>
+                <option value='Friday'>Friday</option>
+              </select>
+            </article>
+
+            <article>
+              <button>LunchBoqs 3</button>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <select className='days'>
+                <option value='Monday'>Monday</option>
+                <option value='Tuesday'>Tuesday</option>
+                <option value='Wednesday'>Wednesday</option>
+                <option value='Thursday'>Thursday</option>
+                <option value='Friday'>Friday</option>
+              </select>
+            </article>
+
+            <article>
+              <button>LunchBoqs 4</button>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <select className='days'>
+                <option value='Monday'>Monday</option>
+                <option value='Tuesday'>Tuesday</option>
+                <option value='Wednesday'>Wednesday</option>
+                <option value='Thursday'>Thursday</option>
+                <option value='Friday'>Friday</option>
+              </select>
+            </article>
+
+            <article>
+              <button> LunchBoqs 5</button>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <p>this is the menu</p>
+              <select className='days'>
+                <option value='Monday'>Monday</option>
+                <option value='Tuesday'>Tuesday</option>
+                <option value='Wednesday'>Wednesday</option>
+                <option value='Thursday'>Thursday</option>
+                <option value='Friday'>Friday</option>
+              </select>
+            </article>
+
+            <article>
+              <button>SnackBoqs</button>
+              <p>this is a snack</p>
+              <p>this is a snack</p>
+              <p>this is a snack</p>
+              <select className='days'>
+                <option value='Monday'>Monday</option>
+                <option value='Tuesday'>Tuesday</option>
+                <option value='Wednesday'>Wednesday</option>
+                <option value='Thursday'>Thursday</option>
+                <option value='Friday'>Friday</option>
+              </select>
+            </article>
           </section>
         </section>
       </section>
