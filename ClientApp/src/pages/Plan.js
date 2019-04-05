@@ -34,40 +34,33 @@ class Plan extends Component {
               <img src={seafood} alt='LOGO' width='180' height='180' />
             </Link>
           </article>
-
           <article className='veggie-img'>
-            <a href='#'>
+            <Link to='/restaurant' className='click-button'>
               <img src={veggie} alt='LOGO' width='180' height='180' />
-            </a>
+            </Link>
           </article>
+
           <article className='sushi-img'>
-            <a href='#'>
+            <Link to='/restaurant' className='click-button'>
               <img src={sushi} alt='LOGO' width='180' height='180' />
-            </a>
+            </Link>
           </article>
           <article className='bakery-img'>
-            <a href='#'>
+            <Link to='/restaurant' className='click-button'>
               <img src={bakery} alt='LOGO' width='180' height='180' />
-            </a>
+            </Link>
           </article>
           <article className='veggie-img'>
-            <a href='#'>
+            <Link to='/restaurant' className='click-button'>
               <img src={italian} alt='LOGO' width='180' height='180' />
-            </a>
+            </Link>
           </article>
           <article className='burger-img'>
-            <a href='#'>
+            <Link to='/restaurant' className='click-button'>
               <img src={burger} alt='LOGO' width='180' height='180' />
-            </a>
+            </Link>
           </article>
         </section>
-        /*{' '}
-        {/* <section>
-          <button className='step-two' type='submit'>
-            Pack
-          </button>
-        </section>{' '} */}
-        */
       </section>
     )
   }

@@ -8,6 +8,22 @@ class Restaurant extends Component {
     monday: {
       lunch: null,
       snack: null
+    },
+    tuesday: {
+      lunch: null,
+      snack: null
+    },
+    wednesday: {
+      lunch: null,
+      snack: null
+    },
+    thursday: {
+      lunch: null,
+      snack: null
+    },
+    friday: {
+      lunch: null,
+      snack: null
     }
   }
 
@@ -62,11 +78,11 @@ class Restaurant extends Component {
                 onChange={e => this.dayChanged(e, 'lunchboqs 2')}
               >
                 <option>Choose the day</option>
-                <option value='Monday'>Monday</option>
-                <option value='Tuesday'>Tuesday</option>
-                <option value='Wednesday'>Wednesday</option>
-                <option value='Thursday'>Thursday</option>
-                <option value='Friday'>Friday</option>
+                <option value='monday'>Monday</option>
+                <option value='tuesday'>Tuesday</option>
+                <option value='wednesday'>Wednesday</option>
+                <option value='thursday'>Thursday</option>
+                <option value='friday'>Friday</option>
               </select>
             </article>
 
@@ -79,11 +95,12 @@ class Restaurant extends Component {
                 className='days'
                 onChange={e => this.dayChanged(e, 'lunchboqs 3')}
               >
-                <option value='Monday'>Monday</option>
-                <option value='Tuesday'>Tuesday</option>
-                <option value='Wednesday'>Wednesday</option>
-                <option value='Thursday'>Thursday</option>
-                <option value='Friday'>Friday</option>
+                <option>Choose the day</option>
+                <option value='monday'>Monday</option>
+                <option value='tuesday'>Tuesday</option>
+                <option value='wednesday'>Wednesday</option>
+                <option value='thursday'>Thursday</option>
+                <option value='friday'>Friday</option>
               </select>
             </article>
 
@@ -96,11 +113,12 @@ class Restaurant extends Component {
                 className='days'
                 onChange={e => this.dayChanged(e, 'lunchboqs 4')}
               >
-                <option value='Monday'>Monday</option>
-                <option value='Tuesday'>Tuesday</option>
-                <option value='Wednesday'>Wednesday</option>
-                <option value='Thursday'>Thursday</option>
-                <option value='Friday'>Friday</option>
+                <option>Choose the day</option>
+                <option value='monday'>Monday</option>
+                <option value='tuesday'>Tuesday</option>
+                <option value='wednesday'>Wednesday</option>
+                <option value='thursday'>Thursday</option>
+                <option value='friday'>Friday</option>
               </select>
             </article>
 
@@ -113,11 +131,12 @@ class Restaurant extends Component {
                 className='days'
                 onChange={e => this.dayChanged(e, 'lunchboqs 5')}
               >
-                <option value='Monday'>Monday</option>
-                <option value='Tuesday'>Tuesday</option>
-                <option value='Wednesday'>Wednesday</option>
-                <option value='Thursday'>Thursday</option>
-                <option value='Friday'>Friday</option>
+                <option>Choose the day</option>
+                <option value='monday'>Monday</option>
+                <option value='tuesday'>Tuesday</option>
+                <option value='wednesday'>Wednesday</option>
+                <option value='thursday'>Thursday</option>
+                <option value='friday'>Friday</option>
               </select>
             </article>
 
@@ -130,11 +149,12 @@ class Restaurant extends Component {
                 className='days'
                 onChange={e => this.dayChanged(e, 'snackboqs')}
               >
-                <option value='Monday'>Monday</option>
-                <option value='Tuesday'>Tuesday</option>
-                <option value='Wednesday'>Wednesday</option>
-                <option value='Thursday'>Thursday</option>
-                <option value='Friday'>Friday</option>
+                <option>Choose the day</option>
+                <option value='monday'>Monday</option>
+                <option value='tuesday'>Tuesday</option>
+                <option value='wednesday'>Wednesday</option>
+                <option value='thursday'>Thursday</option>
+                <option value='friday'>Friday</option>
               </select>
             </article>
           </section>
@@ -169,10 +189,50 @@ class Restaurant extends Component {
                       🐸
                     </span>
                   </td>
-                  <td />
-                  <td />
-                  <td />
-                  <td />
+                  <td>
+                    <span
+                      role='img'
+                      aira-label='this meal has been selected'
+                      style={{
+                        display: this.state.tuesday.lunch ? 'block' : 'none'
+                      }}
+                    >
+                      🐸
+                    </span>
+                  </td>
+                  <td>
+                    <span
+                      role='img'
+                      aira-label='this meal has been selected'
+                      style={{
+                        display: this.state.wednesday.lunch ? 'block' : 'none'
+                      }}
+                    >
+                      🐸
+                    </span>
+                  </td>
+                  <td>
+                    <span
+                      role='img'
+                      aira-label='this meal has been selected'
+                      style={{
+                        display: this.state.thursday.lunch ? 'block' : 'none'
+                      }}
+                    >
+                      🐸
+                    </span>
+                  </td>
+                  <td>
+                    <span
+                      role='img'
+                      aira-label='this meal has been selected'
+                      style={{
+                        display: this.state.friday.lunch ? 'block' : 'none'
+                      }}
+                    >
+                      🐸
+                    </span>
+                  </td>
                 </tr>
                 <tr className='snack-row'>
                   <td>Snack</td>

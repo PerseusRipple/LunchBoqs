@@ -314,7 +314,99 @@ section.container {
   padding: 0;
 }
 
-/* Calendar */
+/*Restaurant Gallery on Plan Page*/
+
+.restaurant-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #ccc;
+}
+.restaurant-gallery article {
+  margin: 0.5rem;
+  border: 0.15rem solid gray;
+  border-radius: 5%;
+}
+
+.seafood-img {
+  display: flex;
+  justify-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: rgb(132, 153, 196);
+}
+
+/*Restaurant Page*/
+
+.restaurant-logo {
+  background-image: url('/images/linkedin_banner_image_2.png');
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 0;
+  padding: 0;
+}
+.seafoodMenu-img img {
+  margin: 0;
+  padding: 0;
+}
+
+.restaurant-page {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.5rem;
+  color: rgb(236, 231, 231);
+  background-color: rgb(53, 48, 48);
+  background-blend-mode: hard-light;
+  /* background-image: url('./images/greywall.png'); */
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 38rem;
+  /* width: 100%; */
+  margin: 0;
+}
+
+.restaurant-page h1,
+h3 {
+  text-align: center;
+}
+
+.menu-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+
+  padding: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+.menu-gallery article {
+  border: 0.25rem solid black;
+  border-radius: 5%;
+  margin: 0.5rem;
+  padding: 0.75rem;
+}
+
+/* Calendar on Restaurant Page */
+
+.menu-calendar {
+  min-height: 24rem;
+}
+
 .calendar-container {
   display: flex;
   justify-content: center;
@@ -330,10 +422,6 @@ section.container {
   padding: 0.75rem;
 }
 
-.days-rows {
-  /* margin-top: 1rem; */
-  /* border: 0.25rem solid black; */
-}
 .days-rows th {
   text-align: center;
   background-color: #ccc;
@@ -356,7 +444,7 @@ th {
   text-align: left;
 }
 
-/*Media Query for Calendar */
+/*Media Query for Calendar on Restaurant Page */
 
 @media screen and (max-width: 600px) {
   .restaurant-gallery {
@@ -383,135 +471,6 @@ th {
     padding: 0.5rem;
     /* border: 0.25rem solid black; */
   }
-}
-
-.step-two {
-  text-align: center;
-  border: 0.1rem solid #ccc;
-  width: 10rem;
-  border-radius: 5%;
-  margin-top: 2rem;
-  margin-left: 33%;
-  font-size: 1.5rem;
-}
-
-.step-two:hover {
-  background-color: rgb(126, 138, 161);
-}
-
-/* Media Queries for Calendar */
-
-/*Restaurant Gallery*/
-
-.restaurant-gallery {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin: 1rem;
-  padding: 1rem;
-  background-color: rgb(126, 138, 161);
-}
-.restaurant-gallery article {
-  margin: 0.5rem;
-  border: 0.15rem solid gray;
-  border-radius: 5%;
-}
-
-.seafood-img {
-  display: flex;
-  justify-items: flex-start;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-.pack-header {
-  margin: 0.75rem;
-  padding: 0.75rem;
-}
-
-ul.restaurant-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: space-around;
-  padding: 1.5rem;
-  padding-top: 0.75rem;
-  text-decoration: none;
-  /* margin-left: 0.5rem;
-  margin-right: 0.5rem; */
-}
-
-li {
-  padding: 0.65rem;
-  font-size: 1.5rem;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  background-color: rgb(132, 153, 196);
-}
-
-.restaurant-page {
-  font-family: 'Architects Daughter', cursive;
-  font-size: 1.5rem;
-  color: rgb(236, 231, 231);
-  background-color: rgb(53, 48, 48);
-  background-blend-mode: hard-light;
-  /* background-image: url('./images/greywall.png'); */
-  background-repeat: no repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 38rem;
-  /* width: 100%; */
-  margin: 0;
-}
-
-.restaurant-logo {
-  background-image: url('/images/linkedin_banner_image_2.png');
-  background-repeat: no repeat;
-  background-position: center;
-  background-size: cover;
-  margin-top: 0;
-  padding: 0;
-}
-.seafoodMenu-img img {
-  margin: 0;
-  padding: 0;
-}
-
-.restaurant-page h1,
-h3 {
-  text-align: center;
-}
-
-.menu-gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: space-around;
-
-  padding: 1.5rem;
-  padding-top: 0.75rem;
-}
-
-.menu-gallery article {
-  border: 0.25rem solid black;
-  border-radius: 5%;
-  margin: 0.5rem;
-  padding: 0.75rem;
-}
-
-.menu-calendar {
-  min-height: 24rem;
 }
 
 /* .menu-gallery article button {
