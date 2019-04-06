@@ -1,9 +1,11 @@
+using System;
 
 namespace LunchBoqs.Models
 {
   public class LunchBoq
   {
     public int Id { get; set; }
+    public string Week { get; set; }
     public string Name { get; set; }
     public string Entree { get; set; }
     public string Side1 { get; set; }

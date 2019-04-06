@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using LunchBoqs.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace content
+namespace lunchboqs
 {
   public partial class DatabaseContext : DbContext
   {
@@ -29,7 +29,7 @@ namespace content
       {
         var envConn = Environment.GetEnvironmentVariable("DATABASE_URL");
 
-        var conn = "server=localhost;database=SdgTemplate";
+        var conn = "server=localhost;database=LunchBoqsDatabase";
         if (envConn != null)
         {
           conn = ConvertPostConnectionToConnectionString(envConn);
@@ -44,5 +44,8 @@ namespace content
     {
       modelBuilder.HasAnnotation("ProductVersion", "2.2.0-rtm-35687");
     }
+    public DbSet<Restaurant> Restaurants { get; set; }
+    public DbSet<LunchBoq> LunchBoqs { get; set; }
+
   }
 }

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import seafood from '../images/seafoodlogo.png'
 
-class Restaurant extends Component {
+class Menu extends Component {
   state = {
     monday: {
       lunch: null,
@@ -24,7 +24,8 @@ class Restaurant extends Component {
     friday: {
       lunch: null,
       snack: null
-    }
+    },
+    menus: []
   }
 
   // meal day changed
@@ -34,6 +35,15 @@ class Restaurant extends Component {
       [event.target.value]: { lunch: meal }
     })
   }
+
+  //   componentDidMount() {
+  //     axios.get('https://localhost:5001/menu').then(resp=>
+  // { this.setState({
+  //   lunchboqs:resp.data
+  // })
+
+  // })
+  //     }
 
   render() {
     return (
@@ -251,4 +261,4 @@ class Restaurant extends Component {
   }
 }
 
-export default Restaurant
+export default Menu

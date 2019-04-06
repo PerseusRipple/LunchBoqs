@@ -30,33 +30,33 @@ class Plan extends Component {
         {/* <h1 className='calendar-header'>Your LunchBoqs</h1> */}
         <section className='restaurant-gallery'>
           <article className='seafood-img'>
-            <Link to='/restaurant' className='click-button'>
+            <Link to='/menu' className='click-button'>
               <img src={seafood} alt='LOGO' width='180' height='180' />
             </Link>
           </article>
           <article className='veggie-img'>
-            <Link to='/restaurant' className='click-button'>
+            <Link to='/menu' className='click-button'>
               <img src={veggie} alt='LOGO' width='180' height='180' />
             </Link>
           </article>
 
           <article className='sushi-img'>
-            <Link to='/restaurant' className='click-button'>
+            <Link to='/menu' className='click-button'>
               <img src={sushi} alt='LOGO' width='180' height='180' />
             </Link>
           </article>
           <article className='bakery-img'>
-            <Link to='/restaurant' className='click-button'>
+            <Link to='/menu' className='click-button'>
               <img src={bakery} alt='LOGO' width='180' height='180' />
             </Link>
           </article>
           <article className='veggie-img'>
-            <Link to='/restaurant' className='click-button'>
+            <Link to='/menu' className='click-button'>
               <img src={italian} alt='LOGO' width='180' height='180' />
             </Link>
           </article>
           <article className='burger-img'>
-            <Link to='/restaurant' className='click-button'>
+            <Link to='/menu' className='click-button'>
               <img src={burger} alt='LOGO' width='180' height='180' />
             </Link>
           </article>
