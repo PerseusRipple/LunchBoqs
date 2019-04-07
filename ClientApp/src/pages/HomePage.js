@@ -38,7 +38,7 @@ class HomePage extends Component {
           <section className='topnav'>
             <section className='login-container'>
               <button className='login' type='submit'>
-                Login
+                Log In
               </button>
 
               <button className='signUp' type='submit'>

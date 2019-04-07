@@ -27,14 +27,6 @@ body {
   /* border: 0.25rem dotted black; */
 }
 
-/* NavBar logo image */
-.topnav img {
-  display: none;
-  align-content: center;
-  /* margin-left: 33%; */
-  /* width: auto; */
-}
-
 /* Input Button */
 .topnav .login-container button {
   float: right;
@@ -303,40 +295,174 @@ section.container {
 @media only screen and (min-width: 992px) {
 }
 
-/* Plan Page*/
+/* Plan Page Header*/
 
-.plan-logo {
+/* Navbar */
+.top-plan {
+  overflow: hidden;
+  background-color: #e9e9e9;
+
+  /* border: 0.25rem dotted black; */
+}
+.top-plan .login-container-plan {
+  float: none;
+}
+
+/* NavBar logo image */
+/* .top-plan img {
+  display: none;
+  align-content: center; */
+/* margin-left: 33%; */
+/* width: auto; */
+
+/* Input LogIn Button on Plan Page */
+.login-btn-plan {
+  float: right;
+  padding-right: 2rem;
+  /*margin-top: 0.5rem;*/
+  /* margin-right: 1rem; */
+  background: #ddd;
+  min-height: 3rem;
+  /* color: purple; */
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Input Button Hover Plan Page */
+.top-plan .login-container-plan button:hover {
+  background: #ccc;
+}
+
+/*Media Queries for NavBar and LogIn Plan Page*/
+@media screen and (max-width: 600px) {
+  .top-plan .login-container-plan {
+    float: none;
+  }
+
+  .top-plan a,
+  .top-plan input,
+  .top-plan .login-container-plan button {
+    float: none;
+    display: block;
+    text-align: right;
+    width: 100%;
+    margin: 0;
+    /* padding: 0.9rem; */
+  }
+
+  .top-plan input[type='text'] {
+    border: 0.1rem solid #ccc;
+  }
+
+  .top-plan .login-container-plan img {
+    float: none;
+    align-content: left;
+    /* margin-left: 33%; */
+    /* width: auto; */
+  }
+  .logo-banner {
+    min-height: 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .top-plan a,
+  .top-plan input,
+  .top-plan .login-container-plan button {
+    float: none;
+    display: block;
+    text-align: right;
+    width: 100%;
+    margin: 0;
+    /* padding: 1rem; */
+  }
+  .logo-banner {
+    min-height: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .top-plan .login-container-plan {
+    float: none;
+  }
+
+  .top-plan a,
+  .top-plan input,
+  .top-plan .login-container-plan button {
+    float: none;
+    display: block;
+    text-align: right;
+    width: 100%;
+    margin: 0;
+  }
+
+  .top-plan input[type='text'] {
+    border: 0.1rem solid #ccc;
+  }
+
+  /* section.login-container-plan button.signUp {
+    display: block;
+  } */
+
+  .top-plan.logo {
+    display: block;
+    align-content: left;
+    /* margin-left: 33%; */
+    /* width: auto; */
+  }
+  .login-btn-plan {
+    min-height: 3rem;
+  }
+}
+
+.logo-banner {
   background-image: url('/images/linkedin_banner_image_2.png');
   background-repeat: no repeat;
   background-position: center;
   background-size: cover;
   margin-top: 0;
-  padding: 0;
+  min-height: 6rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .login-btn-plan {
+    min-height: 4rem;
+  }
+  .logo-banner {
+    min-height: 10rem;
+  }
 }
 
 /*Restaurant Gallery on Plan Page*/
 
 .restaurant-gallery {
-  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 1rem;
-  padding: 1rem;
+  /* margin: 1rem;
+  padding: 1rem; */
   background-color: #ccc;
+  min-height: 24rem;
+  /* width: 100%; */
+  margin: 0;
 }
 .restaurant-gallery article {
   margin: 0.5rem;
-  border: 0.15rem solid gray;
-  border-radius: 5%;
 }
 
-.seafood-img {
+#seafood-img {
   display: flex;
   justify-items: flex-start;
   align-content: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
+  border-radius: 5%;
+}
+
+#box-shadow img {
+  border: 1px solid #8a4419;
+  border-style: inset;
 }
 
 a {
@@ -348,7 +474,17 @@ a:hover {
   background-color: rgb(132, 153, 196);
 }
 
-/*Restaurant Page*/
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 2rem;
+}
+.card {
+  flex: 0 0 auto;
+}
+
+/*Menu Page Header*/
 
 .restaurant-logo {
   background-image: url('/images/linkedin_banner_image_2.png');
@@ -358,12 +494,14 @@ a:hover {
   margin-top: 0;
   padding: 0;
 }
+
+/*Menu Page Main Container*/
 .seafoodMenu-img img {
   margin: 0;
   padding: 0;
 }
 
-.restaurant-page {
+.menu-page {
   font-family: 'Architects Daughter', cursive;
   font-size: 1.5rem;
   color: rgb(236, 231, 231);
@@ -373,15 +511,17 @@ a:hover {
   background-repeat: no repeat;
   background-position: center;
   background-size: cover;
-  min-height: 38rem;
-  /* width: 100%; */
+  min-height: 24rem;
+  width: 100%;
   margin: 0;
 }
 
-.restaurant-page h1,
+.menu-page h1,
 h3 {
   text-align: center;
 }
+
+/*Menu Gallery on Menu Page*/
 
 .menu-gallery {
   display: flex;
@@ -389,7 +529,6 @@ h3 {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: space-around;
-
   padding: 1.5rem;
   padding-top: 0.75rem;
 }
@@ -401,7 +540,18 @@ h3 {
   padding: 0.75rem;
 }
 
-/* Calendar on Restaurant Page */
+.scrolling-wrapper-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 2rem;
+}
+.menu-card {
+  flex: 0 0 auto;
+  justify-content: space-around;
+}
+
+/* Calendar on Menu Page */
 
 .menu-calendar {
   min-height: 24rem;
@@ -444,7 +594,7 @@ th {
   text-align: left;
 }
 
-/*Media Query for Calendar on Restaurant Page */
+/*Media Query for Calendar on Menu Page */
 
 @media screen and (max-width: 600px) {
   .restaurant-gallery {
@@ -477,7 +627,7 @@ th {
   justify-content: center;
 } */
 
-/*Media Query for Restaurant Page */
+/*Media Query for Menu Page */
 
 @media screen and (max-width: 600px) {
   .restaurant-logo {

@@ -56,117 +56,119 @@ class Menu extends Component {
           </article>
         </header>
 
-        <section className='restaurant-page'>
+        <section className='menu-page'>
           <h1>Choose your meal.</h1>
           <h3> Tell us when to deliver your LunchBoqs</h3>
           <section className='menu-gallery'>
-            <article>
-              <button>LunchBoqs 1</button>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <select
-                className='days'
-                onChange={e => this.dayChanged(e, 'lunchboqs 1')}
-              >
-                <option>Choose the day</option>
-                <option value='monday'>Monday</option>
-                <option value='tuesday'>Tuesday</option>
-                <option value='wednesday'>Wednesday</option>
-                <option value='thursday'>Thursday</option>
-                <option value='friday'>Friday</option>
-              </select>
-            </article>
+            <section className='scrolling-wrapper-menu'>
+              <article className='menu-card'>
+                <button>LunchBoqs 1</button>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <select
+                  className='days'
+                  onChange={e => this.dayChanged(e, 'lunchboqs 1')}
+                >
+                  <option>Choose the day</option>
+                  <option value='monday'>Monday</option>
+                  <option value='tuesday'>Tuesday</option>
+                  <option value='wednesday'>Wednesday</option>
+                  <option value='thursday'>Thursday</option>
+                  <option value='friday'>Friday</option>
+                </select>
+              </article>
 
-            <article>
-              <button>LunchBoqs 2</button>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <select
-                className='days'
-                onChange={e => this.dayChanged(e, 'lunchboqs 2')}
-              >
-                <option>Choose the day</option>
-                <option value='monday'>Monday</option>
-                <option value='tuesday'>Tuesday</option>
-                <option value='wednesday'>Wednesday</option>
-                <option value='thursday'>Thursday</option>
-                <option value='friday'>Friday</option>
-              </select>
-            </article>
+              <article className='menu-card'>
+                <button>LunchBoqs 2</button>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <select
+                  className='days'
+                  onChange={e => this.dayChanged(e, 'lunchboqs 2')}
+                >
+                  <option>Choose the day</option>
+                  <option value='monday'>Monday</option>
+                  <option value='tuesday'>Tuesday</option>
+                  <option value='wednesday'>Wednesday</option>
+                  <option value='thursday'>Thursday</option>
+                  <option value='friday'>Friday</option>
+                </select>
+              </article>
 
-            <article>
-              <button>LunchBoqs 3</button>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <select
-                className='days'
-                onChange={e => this.dayChanged(e, 'lunchboqs 3')}
-              >
-                <option>Choose the day</option>
-                <option value='monday'>Monday</option>
-                <option value='tuesday'>Tuesday</option>
-                <option value='wednesday'>Wednesday</option>
-                <option value='thursday'>Thursday</option>
-                <option value='friday'>Friday</option>
-              </select>
-            </article>
+              <article className='menu-card'>
+                <button>LunchBoqs 3</button>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <select
+                  className='days'
+                  onChange={e => this.dayChanged(e, 'lunchboqs 3')}
+                >
+                  <option>Choose the day</option>
+                  <option value='monday'>Monday</option>
+                  <option value='tuesday'>Tuesday</option>
+                  <option value='wednesday'>Wednesday</option>
+                  <option value='thursday'>Thursday</option>
+                  <option value='friday'>Friday</option>
+                </select>
+              </article>
 
-            <article>
-              <button>LunchBoqs 4</button>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <select
-                className='days'
-                onChange={e => this.dayChanged(e, 'lunchboqs 4')}
-              >
-                <option>Choose the day</option>
-                <option value='monday'>Monday</option>
-                <option value='tuesday'>Tuesday</option>
-                <option value='wednesday'>Wednesday</option>
-                <option value='thursday'>Thursday</option>
-                <option value='friday'>Friday</option>
-              </select>
-            </article>
+              <article className='menu-card'>
+                <button>LunchBoqs 4</button>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <select
+                  className='days'
+                  onChange={e => this.dayChanged(e, 'lunchboqs 4')}
+                >
+                  <option>Choose the day</option>
+                  <option value='monday'>Monday</option>
+                  <option value='tuesday'>Tuesday</option>
+                  <option value='wednesday'>Wednesday</option>
+                  <option value='thursday'>Thursday</option>
+                  <option value='friday'>Friday</option>
+                </select>
+              </article>
 
-            <article>
-              <button> LunchBoqs 5</button>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <p>this is the menu</p>
-              <select
-                className='days'
-                onChange={e => this.dayChanged(e, 'lunchboqs 5')}
-              >
-                <option>Choose the day</option>
-                <option value='monday'>Monday</option>
-                <option value='tuesday'>Tuesday</option>
-                <option value='wednesday'>Wednesday</option>
-                <option value='thursday'>Thursday</option>
-                <option value='friday'>Friday</option>
-              </select>
-            </article>
+              <article className='menu-card'>
+                <button> LunchBoqs 5</button>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <p>this is the menu</p>
+                <select
+                  className='days'
+                  onChange={e => this.dayChanged(e, 'lunchboqs 5')}
+                >
+                  <option>Choose the day</option>
+                  <option value='monday'>Monday</option>
+                  <option value='tuesday'>Tuesday</option>
+                  <option value='wednesday'>Wednesday</option>
+                  <option value='thursday'>Thursday</option>
+                  <option value='friday'>Friday</option>
+                </select>
+              </article>
 
-            <article>
-              <button>SnackBoqs</button>
-              <p>this is a snack</p>
-              <p>this is a snack</p>
-              <p>this is a snack</p>
-              <select
-                className='days'
-                onChange={e => this.dayChanged(e, 'snackboqs')}
-              >
-                <option>Choose the day</option>
-                <option value='monday'>Monday</option>
-                <option value='tuesday'>Tuesday</option>
-                <option value='wednesday'>Wednesday</option>
-                <option value='thursday'>Thursday</option>
-                <option value='friday'>Friday</option>
-              </select>
-            </article>
+              <article className='menu-card'>
+                <button>SnackBoqs</button>
+                <p>this is a snack</p>
+                <p>this is a snack</p>
+                <p>this is a snack</p>
+                <select
+                  className='days'
+                  onChange={e => this.dayChanged(e, 'snackboqs')}
+                >
+                  <option>Choose the day</option>
+                  <option value='monday'>Monday</option>
+                  <option value='tuesday'>Tuesday</option>
+                  <option value='wednesday'>Wednesday</option>
+                  <option value='thursday'>Thursday</option>
+                  <option value='friday'>Friday</option>
+                </select>
+              </article>
+            </section>
           </section>
         </section>
 
