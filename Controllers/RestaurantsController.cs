@@ -23,7 +23,7 @@ namespace Lunchboqs.Controllers
     {
       var results = db
       .Restaurants
-
+      .Where(w => w.IsActive)
       .OrderBy(o => o.Name)
       .Select(s => new Restaurant
       {
@@ -89,6 +89,16 @@ namespace Lunchboqs.Controllers
       restaurant.EmailAddress = newRestaurantData.EmailAddress;
       db.SaveChanges();
       return restaurant;
+    }
+
+    //Delete
+    [HttpDelete("{id}")]
+    public ActionResult DeleteRestaurant(int id)
+    {
+      var restaurant = db.Restaurants.FirstOrDefault(f => f.Id == id);
+      restaurant.IsActive = false;
+      db.SaveChanges();
+      return Ok();
     }
   }
 }

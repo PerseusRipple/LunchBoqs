@@ -50,36 +50,12 @@ class Plan extends Component {
                       width='180'
                       height='180'
                     />
+                    {restaurant.name}
+                    {restaurant.id}
                   </Link>
                 </article>
               )
             })}
-            {/* <article id='veggie-img' className='card'>
-              <Link to='/menu' className='click-button'>
-                <img src={veggie} alt='LOGO' width='180' height='180' />
-              </Link>
-            </article>
-
-            <article id='sushi-img' className='card'>
-              <Link to='/menu' className='click-button'>
-                <img src={sushi} alt='LOGO' width='180' height='180' />
-              </Link>
-            </article>
-            <article id='bakery-img' className='card'>
-              <Link to='/menu' className='click-button'>
-                <img src={bakery} alt='LOGO' width='180' height='180' />
-              </Link>
-            </article>
-            <article id='veggie-img' className='card'>
-              <Link to='/menu' className='click-button'>
-                <img src={italian} alt='LOGO' width='180' height='180' />
-              </Link>
-            </article>
-            <article id='burger-img' className='card'>
-              <Link to='/menu' className='click-button'>
-                <img src={burger} alt='LOGO' width='180' height='180' />
-              </Link>
-            </article> */}
           </section>
         </section>
       </section>

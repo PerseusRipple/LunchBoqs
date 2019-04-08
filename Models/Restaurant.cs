@@ -10,6 +10,7 @@ namespace LunchBoqs.Models
     public string Address { get; set; }
     public string PhoneNumber { get; set; }
     public string EmailAddress { get; set; }
+    public bool IsActive { get; set; } = true;
 
 
     //Navigation support

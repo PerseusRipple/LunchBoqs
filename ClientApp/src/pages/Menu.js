@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import seafood from '../images/burgerset.png'
+
 import axios from 'axios'
 
 class Menu extends Component {
   state = {
+    restaurant: {},
     monday: {
       lunch: null,
       snack: null
@@ -46,6 +47,9 @@ class Menu extends Component {
       .then(resp => {
         console.log({ resp })
         // 1) push resp.data into state
+        this.setState({
+          restaurant: resp.data
+        })
       })
   }
 
@@ -56,7 +60,12 @@ class Menu extends Component {
         <header className='restaurant-logo'>
           <article className='seafoodMenu-img'>
             <Link to='/plan' className='click-button'>
-              <img src={seafood} alt='LOGO' width='90' height='90' />
+              <img
+                src={this.state.restaurant.imgUrl}
+                alt='LOGO'
+                width='90'
+                height='90'
+              />
             </Link>
           </article>
         </header>
