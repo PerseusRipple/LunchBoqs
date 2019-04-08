@@ -36,14 +36,13 @@ class Menu extends Component {
     })
   }
 
-  //   componentDidMount() {
-  //     axios.get('https://localhost:5001/menu').then(resp=>
-  // { this.setState({
-  //   lunchboqs:resp.data
-  // })
-
-  // })
-  //     }
+  // componentDidMount() {
+  //   axios.get('https://localhost:5001/api/menu').then(resp => {
+  //     this.setState({
+  //       lunchboqs: resp.data
+  //     })
+  //   })
+  // }
 
   render() {
     return (

@@ -16,16 +16,67 @@ namespace Lunchboqs.Controllers
   {
     private DatabaseContext db;
     public RestaurantsController() => this.db = new DatabaseContext();
+
+    //return all restaurants
+    [HttpGet]
+    public ActionResult<IList<Restaurant>> GetAllRestaurants()
+    {
+      var results = db
+      .Restaurants
+
+      .OrderBy(o => o.Name)
+      .Select(s => new Restaurant
+      {
+        Name = s.Name,
+        ImgUrl = s.ImgUrl,
+        Address = s.Address,
+        PhoneNumber = s.PhoneNumber,
+        EmailAddress = s.EmailAddress,
+        Id = s.Id
+      })
+      .ToList();
+      return results;
+    }
+    //return restaurant names
+    [HttpGet("name/{name}")]
+    public ActionResult<IList<Restaurant>> GetOneRestaurant(string name)
+    {
+      var db = new DatabaseContext();
+      var restaurant = db.Restaurants.Where(f => f.Name.Contains(name));
+      return restaurant.ToList();
+    }
+    //return restaurant direction
+    [HttpGet("address/{address}")]
+
+    public ActionResult<IList<Restaurant>> GetRestaurantAddress(string address)
+    {
+      var db = new DatabaseContext();
+      var restaurant = db.Restaurants.Where(f => f.Address.ToLower().Contains(address.ToLower()));
+      return restaurant.ToList();
+    }
+
+    [HttpGet("{id}")]
+
+    public ActionResult<Restaurant> GetOneRestaurant(int id)
+    {
+      //go to the database
+      var db = new DatabaseContext();
+      //query the database for the animal with the id of id
+      var restaurant = db.Restaurants.FirstOrDefault(f => f.Id == id);
+      //return that animal
+      return restaurant;
+    }
+
+    //add restaurant to dataBase
+    [HttpPost]
+    public ActionResult<Restaurant> CreateRestaurant([FromBody] Restaurant restaurantToAdd)
+    {
+      var db = new DatabaseContext();
+      db.Restaurants.Add(restaurantToAdd);
+      db.SaveChanges();
+      return restaurantToAdd;
+    }
   }
-
-
-  // public ActionResult<IList<Restaurant>> GetOneRestaurant(string name)
-  // {
-
-  // }
-
-
-
-
-
 }
+
+
