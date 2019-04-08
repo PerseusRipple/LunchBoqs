@@ -1,21 +1,24 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-// import images from './images'
-import seafood from '../images/seafoodlogo.png'
-import veggie from '../images/fancyveglogo.png'
-import sushi from '../images/sushi-logo-vector.png'
-import bakery from '../images/bakerylogo.png'
-import italian from '../images/italianlogo.png'
-import burger from '../images/burgerset.png'
+import axios from 'axios'
 
 class Plan extends Component {
   state = {
-    displayRestaurant: true
+    displayRestaurant: true,
+    restaurants: []
   }
 
   menuOnClick = () => {
     this.setState({
       displayRestaurant: true
+    })
+  }
+
+  componentDidMount() {
+    axios.get('/api/restaurants').then(resp => {
+      this.setState({
+        restaurants: resp.data
+      })
     })
   }
 
@@ -37,12 +40,21 @@ class Plan extends Component {
         {/* <h1 className='calendar-header'>Your LunchBoqs</h1> */}
         <section className='restaurant-gallery'>
           <section className='scrolling-wrapper' id='box-shadow'>
-            <article id='seafood-img' className='card'>
-              <Link to='/menu' className='click-button'>
-                <img src={seafood} alt='LOGO' width='180' height='180' />
-              </Link>
-            </article>
-            <article id='veggie-img' className='card'>
+            {this.state.restaurants.map(restaurant => {
+              return (
+                <article id='seafood-img' className='card' key={restaurant.id}>
+                  <Link to={`/menu/${restaurant.id}`} className='click-button'>
+                    <img
+                      src={restaurant.imgUrl}
+                      alt='LOGO'
+                      width='180'
+                      height='180'
+                    />
+                  </Link>
+                </article>
+              )
+            })}
+            {/* <article id='veggie-img' className='card'>
               <Link to='/menu' className='click-button'>
                 <img src={veggie} alt='LOGO' width='180' height='180' />
               </Link>
@@ -67,7 +79,7 @@ class Plan extends Component {
               <Link to='/menu' className='click-button'>
                 <img src={burger} alt='LOGO' width='180' height='180' />
               </Link>
-            </article>
+            </article> */}
           </section>
         </section>
       </section>

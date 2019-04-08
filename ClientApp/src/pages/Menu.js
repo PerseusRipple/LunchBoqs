@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import seafood from '../images/seafoodlogo.png'
+import seafood from '../images/burgerset.png'
+import axios from 'axios'
 
 class Menu extends Component {
   state = {
@@ -36,14 +37,19 @@ class Menu extends Component {
     })
   }
 
-  // componentDidMount() {
-  //   axios.get('https://localhost:5001/api/menu').then(resp => {
-  //     this.setState({
-  //       lunchboqs: resp.data
-  //     })
-  //   })
-  // }
+  componentDidMount() {
+    axios
+      .get(
+        'https://localhost:5001/api/restaurants/' +
+          this.props.match.params.restaurantId
+      )
+      .then(resp => {
+        console.log({ resp })
+        // 1) push resp.data into state
+      })
+  }
 
+  // 2) update the render method to read the imgUrl from state and also display the restaurant's name
   render() {
     return (
       <section>
@@ -172,7 +178,6 @@ class Menu extends Component {
         </section>
 
         <section className='calendar-container'>
-          <article />
           <section className='calendar'>
             <table>
               <thead>

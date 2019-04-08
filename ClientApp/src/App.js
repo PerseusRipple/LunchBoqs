@@ -15,7 +15,7 @@ export default class App extends Component {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/plan' component={Plan} />
           <Route exact path='/pack' component={Pack} />
-          <Route exact path='/menu' component={Menu} />
+          <Route exact path='/menu/:restaurantId' component={Menu} />
         </Switch>
       </Router>
     )

@@ -76,6 +76,20 @@ namespace Lunchboqs.Controllers
       db.SaveChanges();
       return restaurantToAdd;
     }
+
+    //PUT
+    [HttpPut("{id}")]
+    public ActionResult<Restaurant> UpdateRestaurant(int id, [FromBody] Restaurant newRestaurantData)
+    {
+      var restaurant = db.Restaurants.FirstOrDefault(f => f.Id == id);
+      restaurant.Name = newRestaurantData.Name;
+      restaurant.ImgUrl = newRestaurantData.ImgUrl;
+      restaurant.Address = newRestaurantData.Address;
+      restaurant.PhoneNumber = newRestaurantData.PhoneNumber;
+      restaurant.EmailAddress = newRestaurantData.EmailAddress;
+      db.SaveChanges();
+      return restaurant;
+    }
   }
 }
 
