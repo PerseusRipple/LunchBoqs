@@ -176,6 +176,8 @@ section.container {
 
 .selector-container button {
   text-align: center;
+  text-decoration: none;
+  text-decoration-color: black;
   border: 0.1rem solid #ccc;
   border-radius: 5%;
   margin-top: 2rem;
@@ -187,6 +189,8 @@ section.container {
 
 .selector-container button:hover {
   background: #ccc;
+  text-decoration-color: black;
+  text-decoration: none;
 }
 
 /* Media Queries for Selector Container */
@@ -401,10 +405,6 @@ section.container {
     border: 0.1rem solid #ccc;
   }
 
-  /* section.login-container-plan button.signUp {
-    display: block;
-  } */
-
   .top-plan.logo {
     display: block;
     align-content: left;
@@ -442,7 +442,7 @@ section.container {
   flex-direction: row;
   /* margin: 1rem;
   padding: 1rem; */
-  background-color: #ccc;
+  background-color: rgb(53, 48, 48);
   min-height: 24rem;
   /* width: 100%; */
   margin: 0;
@@ -465,13 +465,8 @@ section.container {
   border-style: inset;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  background-color: rgb(132, 153, 196);
+.click-button img {
+  border-radius: 5%;
 }
 
 .scrolling-wrapper {
@@ -517,7 +512,7 @@ a:hover {
 }
 
 .menu-page h1,
-h3 {
+h2 {
   text-align: center;
 }
 

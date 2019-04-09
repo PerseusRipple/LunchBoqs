@@ -83,13 +83,15 @@ class HomePage extends Component {
 
         {/* <section className='flex-container'>  */}
         <section className='selector-container'>
-          <Link
-            to='/plan'
-            className='hover-button'
-            onMouseOver={this.planOnMouseOver}
-          >
-            Plan
-          </Link>
+          <button>
+            <Link
+              to='/plan'
+              className='hover-button'
+              onMouseOver={this.planOnMouseOver}
+            >
+              Look at the Restaurants
+            </Link>
+          </button>
           <button onMouseOver={this.packOnMouseOver}>Pack</button>
           <button onMouseOver={this.eatOnMouseOver}>Eat</button>
         </section>

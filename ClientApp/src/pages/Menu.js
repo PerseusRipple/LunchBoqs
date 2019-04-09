@@ -27,7 +27,8 @@ class Menu extends Component {
       lunch: null,
       snack: null
     },
-    menus: []
+    menus: [],
+    lunchboqs: []
   }
 
   // meal day changed
@@ -38,6 +39,12 @@ class Menu extends Component {
     })
   }
 
+  removeDay = day => {
+    this.setState({
+      [day]: { lunch: null }
+    })
+  }
+
   componentDidMount() {
     axios
       .get(
@@ -45,15 +52,22 @@ class Menu extends Component {
           this.props.match.params.restaurantId
       )
       .then(resp => {
-        console.log({ resp })
-        // 1) push resp.data into state
         this.setState({
           restaurant: resp.data
         })
       })
+    axios
+      .get(
+        'https://localhost:5001/api/lunchboqs/' +
+          this.props.match.params.restaurantId
+      )
+      .then(resp => {
+        this.setState({
+          lunchboqs: resp.data
+        })
+      })
   }
 
-  // 2) update the render method to read the imgUrl from state and also display the restaurant's name
   render() {
     return (
       <section>
@@ -71,204 +85,129 @@ class Menu extends Component {
         </header>
 
         <section className='menu-page'>
-          <h1>Choose your meal.</h1>
-          <h3> Tell us when to deliver your LunchBoqs</h3>
+          <h1>Choose your meal for</h1>
+          <h2>{this.state.restaurant.name}</h2>
+
           <section className='menu-gallery'>
             <section className='scrolling-wrapper-menu'>
-              <article className='menu-card'>
-                <button>LunchBoqs 1</button>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <select
-                  className='days'
-                  onChange={e => this.dayChanged(e, 'lunchboqs 1')}
-                >
-                  <option>Choose the day</option>
-                  <option value='monday'>Monday</option>
-                  <option value='tuesday'>Tuesday</option>
-                  <option value='wednesday'>Wednesday</option>
-                  <option value='thursday'>Thursday</option>
-                  <option value='friday'>Friday</option>
-                </select>
-              </article>
-
-              <article className='menu-card'>
-                <button>LunchBoqs 2</button>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <select
-                  className='days'
-                  onChange={e => this.dayChanged(e, 'lunchboqs 2')}
-                >
-                  <option>Choose the day</option>
-                  <option value='monday'>Monday</option>
-                  <option value='tuesday'>Tuesday</option>
-                  <option value='wednesday'>Wednesday</option>
-                  <option value='thursday'>Thursday</option>
-                  <option value='friday'>Friday</option>
-                </select>
-              </article>
-
-              <article className='menu-card'>
-                <button>LunchBoqs 3</button>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <select
-                  className='days'
-                  onChange={e => this.dayChanged(e, 'lunchboqs 3')}
-                >
-                  <option>Choose the day</option>
-                  <option value='monday'>Monday</option>
-                  <option value='tuesday'>Tuesday</option>
-                  <option value='wednesday'>Wednesday</option>
-                  <option value='thursday'>Thursday</option>
-                  <option value='friday'>Friday</option>
-                </select>
-              </article>
-
-              <article className='menu-card'>
-                <button>LunchBoqs 4</button>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <select
-                  className='days'
-                  onChange={e => this.dayChanged(e, 'lunchboqs 4')}
-                >
-                  <option>Choose the day</option>
-                  <option value='monday'>Monday</option>
-                  <option value='tuesday'>Tuesday</option>
-                  <option value='wednesday'>Wednesday</option>
-                  <option value='thursday'>Thursday</option>
-                  <option value='friday'>Friday</option>
-                </select>
-              </article>
-
-              <article className='menu-card'>
-                <button> LunchBoqs 5</button>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <p>this is the menu</p>
-                <select
-                  className='days'
-                  onChange={e => this.dayChanged(e, 'lunchboqs 5')}
-                >
-                  <option>Choose the day</option>
-                  <option value='monday'>Monday</option>
-                  <option value='tuesday'>Tuesday</option>
-                  <option value='wednesday'>Wednesday</option>
-                  <option value='thursday'>Thursday</option>
-                  <option value='friday'>Friday</option>
-                </select>
-              </article>
-
-              <article className='menu-card'>
-                <button>SnackBoqs</button>
-                <p>this is a snack</p>
-                <p>this is a snack</p>
-                <p>this is a snack</p>
-                <select
-                  className='days'
-                  onChange={e => this.dayChanged(e, 'snackboqs')}
-                >
-                  <option>Choose the day</option>
-                  <option value='monday'>Monday</option>
-                  <option value='tuesday'>Tuesday</option>
-                  <option value='wednesday'>Wednesday</option>
-                  <option value='thursday'>Thursday</option>
-                  <option value='friday'>Friday</option>
-                </select>
-              </article>
+              {this.state.lunchboqs.map((lunchboq, i) => {
+                return (
+                  <article className='menu-card' key={lunchboq.id}>
+                    <button>LunchBoq {i + 1}</button>
+                    <p>{lunchboq.entree}</p>
+                    <p>{lunchboq.side1}</p>
+                    <p>{lunchboq.side2}</p>
+                    <select
+                      className='days'
+                      onChange={e => this.dayChanged(e, lunchboq.name)}
+                    >
+                      <option>Choose the day</option>
+                      <option value='monday'>Monday</option>
+                      <option value='tuesday'>Tuesday</option>
+                      <option value='wednesday'>Wednesday</option>
+                      <option value='thursday'>Thursday</option>
+                      <option value='friday'>Friday</option>
+                    </select>
+                  </article>
+                )
+              })}
             </section>
           </section>
-        </section>
 
-        <section className='calendar-container'>
-          <section className='calendar'>
-            <table>
-              <thead>
-                <tr className='days-rows'>
-                  <th />
-                  <th>Monday</th>
-                  <th>Tuesday</th>
-                  <th>Wednesday</th>
-                  <th>Thursday</th>
-                  <th>Friday</th>
-                </tr>
-              </thead>
+          <section className='calendar-container'>
+            <section className='calendar'>
+              <table>
+                <thead>
+                  <tr className='days-rows'>
+                    <th />
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                  </tr>
+                </thead>
 
-              <tbody>
-                <tr className='lunch-row'>
-                  <td>Lunch</td>
-                  <td>
-                    <span
-                      role='img'
-                      aira-label='this meal has been selected'
-                      style={{
-                        display: this.state.monday.lunch ? 'block' : 'none'
-                      }}
-                    >
-                      🐸
-                    </span>
-                  </td>
-                  <td>
-                    <span
-                      role='img'
-                      aira-label='this meal has been selected'
-                      style={{
-                        display: this.state.tuesday.lunch ? 'block' : 'none'
-                      }}
-                    >
-                      🐸
-                    </span>
-                  </td>
-                  <td>
-                    <span
-                      role='img'
-                      aira-label='this meal has been selected'
-                      style={{
-                        display: this.state.wednesday.lunch ? 'block' : 'none'
-                      }}
-                    >
-                      🐸
-                    </span>
-                  </td>
-                  <td>
-                    <span
-                      role='img'
-                      aira-label='this meal has been selected'
-                      style={{
-                        display: this.state.thursday.lunch ? 'block' : 'none'
-                      }}
-                    >
-                      🐸
-                    </span>
-                  </td>
-                  <td>
-                    <span
-                      role='img'
-                      aira-label='this meal has been selected'
-                      style={{
-                        display: this.state.friday.lunch ? 'block' : 'none'
-                      }}
-                    >
-                      🐸
-                    </span>
-                  </td>
-                </tr>
-                <tr className='snack-row'>
-                  <td>Snack</td>
-                  <td />
-                  <td />
-                  <td />
-                  <td />
-                  <td />
-                </tr>
-              </tbody>
-            </table>
+                <tbody>
+                  <tr className='lunch-row'>
+                    <td>Lunch</td>
+                    <td>
+                      <span
+                        role='img'
+                        aira-label='this meal has been selected'
+                        style={{
+                          display: this.state.monday.lunch ? 'block' : 'none'
+                        }}
+                        onClick={() =>
+                          this.removeDay(
+                            'monday',
+                            'tuesday',
+                            'wednesday',
+                            'thursday',
+                            'friday'
+                          )
+                        }
+                      >
+                        🐸
+                      </span>
+                    </td>
+                    <td>
+                      <span
+                        role='img'
+                        aira-label='this meal has been selected'
+                        style={{
+                          display: this.state.tuesday.lunch ? 'block' : 'none'
+                        }}
+                        onClick={() => this.removeDay('tuesday')}
+                      >
+                        🐸
+                      </span>
+                    </td>
+                    <td>
+                      <span
+                        role='img'
+                        aira-label='this meal has been selected'
+                        style={{
+                          display: this.state.wednesday.lunch ? 'block' : 'none'
+                        }}
+                      >
+                        🐸
+                      </span>
+                    </td>
+                    <td>
+                      <span
+                        role='img'
+                        aira-label='this meal has been selected'
+                        style={{
+                          display: this.state.thursday.lunch ? 'block' : 'none'
+                        }}
+                      >
+                        🐸
+                      </span>
+                    </td>
+                    <td>
+                      <span
+                        role='img'
+                        aira-label='this meal has been selected'
+                        style={{
+                          display: this.state.friday.lunch ? 'block' : 'none'
+                        }}
+                      >
+                        🐸
+                      </span>
+                    </td>
+                  </tr>
+                  <tr className='snack-row'>
+                    <td>Snack</td>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                  </tr>
+                </tbody>
+              </table>
+            </section>
           </section>
         </section>
       </section>
