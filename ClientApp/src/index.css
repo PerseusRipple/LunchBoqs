@@ -506,14 +506,15 @@ section.container {
   background-repeat: no repeat;
   background-position: center;
   background-size: cover;
-  min-height: 24rem;
-  width: 100%;
+  min-height: 10rem;
+  /* width: 100%; */
   margin: 0;
 }
 
 .menu-page h1,
 h2 {
   text-align: center;
+  padding: 1rem;
 }
 
 /*Menu Gallery on Menu Page*/
@@ -549,18 +550,19 @@ h2 {
 /* Calendar on Menu Page */
 
 .menu-calendar {
-  min-height: 24rem;
+  min-height: 10rem;
 }
 
 .calendar-container {
   display: flex;
   justify-content: center;
   width: 100%;
+
   /* min-height: 16rem; */
   /* margin-top: 1rem; */
 }
 
-lendar-directive h3 {
+.calendar-directive h3 {
   text-align: center;
 }
 

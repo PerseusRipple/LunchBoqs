@@ -31,7 +31,7 @@ class Menu extends Component {
     lunchboqs: []
   }
 
-  // meal day changed
+  //meal day changed
   dayChanged = (event, meal) => {
     console.log('thing was change', event.target.value, 'for ', meal)
     this.setState({
@@ -44,23 +44,23 @@ class Menu extends Component {
       [day]: { lunch: null }
     })
   }
+  // timeChanged = (event, meal) => {
+  //   console.log('thing was change', event.target.value, 'for ', meal)
+  //   this.setState({
+  //     [event.target.value]: { lunch: meal }
+  //   })
+  // }
 
   componentDidMount() {
     axios
-      .get(
-        'https://localhost:5001/api/restaurants/' +
-          this.props.match.params.restaurantId
-      )
+      .get('/api/restaurants/' + this.props.match.params.restaurantId)
       .then(resp => {
         this.setState({
           restaurant: resp.data
         })
       })
     axios
-      .get(
-        'https://localhost:5001/api/lunchboqs/' +
-          this.props.match.params.restaurantId
-      )
+      .get('/api/lunchboqs/' + this.props.match.params.restaurantId)
       .then(resp => {
         this.setState({
           lunchboqs: resp.data
@@ -71,19 +71,29 @@ class Menu extends Component {
   render() {
     return (
       <section>
-        <header className='restaurant-logo'>
-          <article className='seafoodMenu-img'>
-            <Link to='/plan' className='click-button'>
-              <img
-                src={this.state.restaurant.imgUrl}
-                alt='LOGO'
-                width='90'
-                height='90'
-              />
-            </Link>
-          </article>
+        <header>
+          <section className='top-plan'>
+            <section className='login-container-plan'>
+              <button className='login-btn-plan' type='submit'>
+                Log In
+              </button>
+            </section>
+          </section>
         </header>
-
+        <section className='restaurant-logo'>
+          <header>
+            <article className='seafoodMenu-img'>
+              <Link to='/plan' className='click-button'>
+                <img
+                  src={this.state.restaurant.imgUrl}
+                  alt='LOGO'
+                  width='90'
+                  height='90'
+                />
+              </Link>
+            </article>
+          </header>
+        </section>
         <section className='menu-page'>
           <h1>Choose your meal for</h1>
           <h2>{this.state.restaurant.name}</h2>
@@ -108,6 +118,17 @@ class Menu extends Component {
                       <option value='thursday'>Thursday</option>
                       <option value='friday'>Friday</option>
                     </select>
+                    {/* <select
+                      className='times'
+                      onChange={e => this.timeChanged(e, lunchboq.name)}
+                    >
+                      <option>Choose the time</option>
+                      <option value='noon'>Noon</option>
+                      <option value='12:30'>12:30pm</option>
+                      <option value='1:00'>1:00pm</option>
+                      <option value='1:30'>1:30pm</option>
+                      <option value='2:00'>2:00pm</option>
+                    </select> */}
                   </article>
                 )
               })}
@@ -138,15 +159,7 @@ class Menu extends Component {
                         style={{
                           display: this.state.monday.lunch ? 'block' : 'none'
                         }}
-                        onClick={() =>
-                          this.removeDay(
-                            'monday',
-                            'tuesday',
-                            'wednesday',
-                            'thursday',
-                            'friday'
-                          )
-                        }
+                        onClick={() => this.removeDay('monday')}
                       >
                         🐸
                       </span>
@@ -170,6 +183,7 @@ class Menu extends Component {
                         style={{
                           display: this.state.wednesday.lunch ? 'block' : 'none'
                         }}
+                        onClick={() => this.removeDay('wednesday')}
                       >
                         🐸
                       </span>
@@ -181,6 +195,7 @@ class Menu extends Component {
                         style={{
                           display: this.state.thursday.lunch ? 'block' : 'none'
                         }}
+                        onClick={() => this.removeDay('thursday')}
                       >
                         🐸
                       </span>
@@ -192,6 +207,7 @@ class Menu extends Component {
                         style={{
                           display: this.state.friday.lunch ? 'block' : 'none'
                         }}
+                        onClick={() => this.removeDay('friday')}
                       >
                         🐸
                       </span>
