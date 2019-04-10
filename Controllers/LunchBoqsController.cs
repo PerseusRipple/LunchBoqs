@@ -65,33 +65,6 @@ namespace LunchBoqs.Controllers
 
 
 
-// [HttpGet]
-// public ActionResult<IList<LunchBoq>> GetAllLunchBoqs()
-// {
-//   var results = db
-//   .LunchBoqs
-
-//   .OrderBy(o => o.Week)
-//   .Select(s => new LunchBoq
-//   {
-//     Week = s.Week,
-//     Name = s.Name,
-//     Entree = s.Entree,
-//     Side1 = s.Side1,
-//     Side2 = s.Side2,
-//     Id = s.Id
-//   })
-//   .ToList();
-//   return results;
-// }
-// //return lunchboqs names
-// [HttpGet("name/{name}")]
-// public ActionResult<IList<LunchBoq>> GetOneLunchBoq(string name)
-// {
-//   var db = new DatabaseContext();
-//   var lunchboq = db.LunchBoqs.Where(f => f.Name.Contains(name));
-//   return lunchboq.ToList();
-// }
 
 
 

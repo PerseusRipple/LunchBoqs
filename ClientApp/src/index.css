@@ -562,6 +562,13 @@ h2 {
   /* margin-top: 1rem; */
 }
 
+.calendar {
+  border: 0.75rem solid black;
+  border-radius: 10%;
+  margin: 1rem;
+  margin-bottom: 2.5rem;
+}
+
 .calendar-directive h3 {
   text-align: center;
 }
@@ -584,8 +591,7 @@ h2 {
   padding: 1rem;
   background-color: rgb(201, 190, 174);
   border: 0.25rem solid black;
-  width: 7rem;
-  height: 4rem;
+  min-width: 10rem;
 }
 
 th {
@@ -593,6 +599,23 @@ th {
   border-spacing: 0;
 
   text-align: left;
+}
+
+.bottom-container {
+  display: block;
+  text-align: center;
+  /* align-content: center; */
+  background: #ccc;
+  min-height: 18rem;
+}
+
+.order-button-container {
+  display: block;
+  text-align: center;
+}
+
+.order.button {
+  text-align: center;
 }
 
 /*Media Query for Calendar on Menu Page */

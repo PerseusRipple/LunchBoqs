@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using lunchboqs;
@@ -35,14 +36,34 @@ namespace LunchBoqs.Controllers
     {
       var db = new DatabaseContext();
       // check if the day exists  (if any for userselectionToAdd.dayOfWeek == exists)
-      // update with the new lunchBoqsId
-      // else it doesnt exist yet
-      // add it (already done)
-
-      db.UserSelections.Add(userselectionToAdd);
-      db.SaveChanges();
-      return userselectionToAdd;
+      if (db.UserSelections.Any(a => a.DayOfWeek == userselectionToAdd.DayOfWeek))
+      {
+        // we already have that day
+        var userselections = db.UserSelections.FirstOrDefault(f => f.DayOfWeek == userselectionToAdd.DayOfWeek);
+        //   // update with the new lunchBoqsId
+        userselections.LunchBoqsId = userselections.LunchBoqsId;
+        db.SaveChanges();
+        return userselections;
+      }
+      else
+      {
+        // wee need to create that day
+        db.UserSelections.Add(userselectionToAdd);
+        db.SaveChanges();
+        return userselectionToAdd;
+      }
     }
+
+    [HttpDelete]
+    public ActionResult<IList<UserSelection>> DeleteUserSelection([FromBody] UserSelection userselectionToDelete)
+    {
+      var userselections = db.UserSelections.Where(w => w.DayOfWeek == userselectionToDelete.DayOfWeek);
+      db.UserSelections.RemoveRange(userselections);
+      db.SaveChanges();
+      return Ok();
+
+    }
+
 
 
   }

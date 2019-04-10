@@ -48,10 +48,21 @@ class Menu extends Component {
   }
 
   removeDay = day => {
-    this.setState({
-      [day]: { lunch: null }
-    })
+    // todo: axios delete that endpoint
+    // .then
+    axios
+      .delete('/api/userselections/', {
+        data: {
+          dayOfWeek: day
+        }
+      })
+      .then(resp => {
+        this.setState({
+          [day]: { lunch: null }
+        })
+      })
   }
+
   // timeChanged = (event, meal) => {
   //   console.log('thing was change', event.target.value, 'for ', meal)
   //   this.setState({
@@ -175,7 +186,7 @@ class Menu extends Component {
                 </thead>
 
                 <tbody>
-                  <tr className='lunch-row'>
+                  <tr className='lunch-row' width='144' heigth='80'>
                     <td>Lunch</td>
                     <td>
                       <span
@@ -250,6 +261,15 @@ class Menu extends Component {
               </table>
             </section>
           </section>
+        </section>
+        <section className='bottom-container'>
+          <h2>Ready to Make Midday Simple?</h2>
+          <section className='order-button-container'>
+            <button className='order-button' type='submit'>
+              Proceed to Checkout
+            </button>
+          </section>
+          <footer />
         </section>
       </section>
     )
