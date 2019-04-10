@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using LunchBoqs.Models;
 using Microsoft.EntityFrameworkCore;
@@ -46,6 +47,6 @@ namespace lunchboqs
     }
     public DbSet<Restaurant> Restaurants { get; set; }
     public DbSet<LunchBoq> LunchBoqs { get; set; }
-
+    public DbSet<UserSelection> UserSelections { get; internal set; }
   }
 }

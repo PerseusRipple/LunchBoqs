@@ -32,11 +32,19 @@ class Menu extends Component {
   }
 
   //meal day changed
-  dayChanged = (event, meal) => {
+  dayChanged = (event, meal, lunchboqsId) => {
     console.log('thing was change', event.target.value, 'for ', meal)
-    this.setState({
-      [event.target.value]: { lunch: meal }
-    })
+    const dayOfWeek = event.target.value
+    axios
+      .post('/api/userselections/', {
+        dayOfWeek: dayOfWeek,
+        lunchboqsId: lunchboqsId
+      })
+      .then(resp => {
+        this.setState({
+          [dayOfWeek]: { lunch: meal }
+        })
+      })
   }
 
   removeDay = day => {
@@ -66,6 +74,21 @@ class Menu extends Component {
           lunchboqs: resp.data
         })
       })
+    axios.get('/api/userselections/').then(resp => {
+      console.log(resp)
+      // covert the array resp.data to the object we need in state
+      const alreadySelectedMeals = {}
+      // loop over the array
+      resp.data.forEach(selection => {
+        alreadySelectedMeals[selection.dayOfWeek] = {
+          lunch: selection.lunchBoqsId
+        }
+      })
+      console.log(alreadySelectedMeals)
+      this.setState({
+        ...alreadySelectedMeals
+      })
+    })
   }
 
   render() {
@@ -109,7 +132,9 @@ class Menu extends Component {
                     <p>{lunchboq.side2}</p>
                     <select
                       className='days'
-                      onChange={e => this.dayChanged(e, lunchboq.name)}
+                      onChange={e =>
+                        this.dayChanged(e, lunchboq.name, lunchboq.id)
+                      }
                     >
                       <option>Choose the day</option>
                       <option value='monday'>Monday</option>
