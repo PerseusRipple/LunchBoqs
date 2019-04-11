@@ -23,107 +23,97 @@ class Checkout extends Component {
         </article>
 
         <section className='checkout-container'>
-          <h1>Review Your Weekly Menu</h1>
+          <h3>Review Your Weekly Menu</h3>
 
           <section className='checkout-dropdown-container'>
-            <select
-              className='days-order'
-              // onChange={e =>
-              //   this.dayChanged(e, lunchboq.name, lunchboq.id)
-              // }
-            >
-              <option>Monday's Lunchboq's</option>
-              <option value='Restaurant Name'>Mama Mia</option>
-              <option value='LunchBoq1'>LunchBoq1</option>
-              <option value='Entree'>Entree</option>
-              <option value='Side1'>Side1</option>
-              <option value='Side2'>Side2</option>
-            </select>
+            <section className='scrolling-wrapper-checkout'>
+              <article className='checkout-card'>
+                <select
+                  className='days-order'
+                  // onChange={e =>
+                  //   this.dayChanged(e, lunchboq.name, lunchboq.id)
+                  // }
+                >
+                  <option>Monday's Lunchboq's</option>
+                  <option value='Restaurant Name'>Mama Mia</option>
+                  <option value='LunchBoq1'>LunchBoq1</option>
+                  <option value='Entree'>Entree</option>
+                  <option value='Side1'>Side1</option>
+                  <option value='Side2'>Side2</option>
+                </select>
+                <section className='check-buttons'>
+                  <button>Keep</button>
+                  <button>Empty</button>
+                </section>
+              </article>
 
-            <select
-              className='days-order'
-              // onChange={e =>
-              //   this.dayChanged(e, lunchboq.name, lunchboq.id)
-              // }
-            >
-              <option>Monday's Lunchboq's</option>
-              <option value='Restaurant Name'>Mama Mia</option>
-              <option value='LunchBoq1'>LunchBoq1</option>
-              <option value='Entree'>Entree</option>
-              <option value='Side1'>Side1</option>
-              <option value='Side2'>Side2</option>
-            </select>
+              <article className='checkout-card'>
+                <select
+                  className='days-order'
+                  // onChange={e =>
+                  //   this.dayChanged(e, lunchboq.name, lunchboq.id)
+                  // }
+                >
+                  <option>Tuesdays Lunchboq's</option>
+                  <option value='Restaurant Name'>Man Bun</option>
+                  <option value='LunchBoq2'>LunchBoq2</option>
+                  <option value='Entree'>Entree</option>
+                  <option value='Side1'>Side1</option>
+                  <option value='Side2'>Side2</option>
+                </select>
+              </article>
 
-            <select
-              className='days-order'
-              // onChange={e =>
-              //   this.dayChanged(e, lunchboq.name, lunchboq.id)
-              // }
-            >
-              <option>Monday's Lunchboq's</option>
-              <option value='Restaurant Name'>Mama Mia</option>
-              <option value='LunchBoq1'>LunchBoq1</option>
-              <option value='Entree'>Entree</option>
-              <option value='Side1'>Side1</option>
-              <option value='Side2'>Side2</option>
-            </select>
+              <article className='checkout-card'>
+                <select
+                  className='days-order'
+                  // onChange={e =>
+                  //   this.dayChanged(e, lunchboq.name, lunchboq.id)
+                  // }
+                >
+                  <option>Wednesday's Lunchboq's</option>
+                  <option value='Restaurant Name'>Chopsticks</option>
+                  <option value='LunchBoq3'>LunchBoq3</option>
+                  <option value='Entree'>Entree</option>
+                  <option value='Side1'>Side1</option>
+                  <option value='Side2'>Side2</option>
+                </select>
+              </article>
 
-            <select
-              className='days-order'
-              // onChange={e =>
-              //   this.dayChanged(e, lunchboq.name, lunchboq.id)
-              // }
-            >
-              <option>Tuesdays Lunchboq's</option>
-              <option value='Restaurant Name'>Man Bun</option>
-              <option value='LunchBoq2'>LunchBoq2</option>
-              <option value='Entree'>Entree</option>
-              <option value='Side1'>Side1</option>
-              <option value='Side2'>Side2</option>
-            </select>
+              <article className='checkout-card'>
+                <select
+                  className='days-order'
+                  // onChange={e =>
+                  //   this.dayChanged(e, lunchboq.name, lunchboq.id)
+                  // }
+                >
+                  <option>Thursday's Lunchboq's</option>
+                  <option value='Restaurant Name'>Garden of Eaton</option>
+                  <option value='LunchBoq1'>LunchBoq1</option>
+                  <option value='Entree'>Entree</option>
+                  <option value='Side1'>Side1</option>
+                  <option value='Side2'>Side2</option>
+                </select>
+              </article>
 
-            <select
-              className='days-order'
-              // onChange={e =>
-              //   this.dayChanged(e, lunchboq.name, lunchboq.id)
-              // }
-            >
-              <option>Wednesday's Lunchboq's</option>
-              <option value='Restaurant Name'>Chopsticks</option>
-              <option value='LunchBoq3'>LunchBoq3</option>
-              <option value='Entree'>Entree</option>
-              <option value='Side1'>Side1</option>
-              <option value='Side2'>Side2</option>
-            </select>
-
-            <select
-              className='days-order'
-              // onChange={e =>
-              //   this.dayChanged(e, lunchboq.name, lunchboq.id)
-              // }
-            >
-              <option>Thursday's Lunchboq's</option>
-              <option value='Restaurant Name'>Garden of Eaton</option>
-              <option value='LunchBoq1'>LunchBoq1</option>
-              <option value='Entree'>Entree</option>
-              <option value='Side1'>Side1</option>
-              <option value='Side2'>Side2</option>
-            </select>
-
-            <select
-              className='days-order'
-              // onChange={e =>
-              //   this.dayChanged(e, lunchboq.name, lunchboq.id)
-              // }
-            >
-              <option>Friday's Lunchboq's</option>
-              <option value='Restaurant Name'>Chopsticks</option>
-              <option value='LunchBoq5'>LunchBoq1</option>
-              <option value='Entree'>Entree</option>
-              <option value='Side1'>Side1</option>
-              <option value='Side2'>Side2</option>
-            </select>
+              <article className='checkout-card'>
+                <select
+                  className='days-order'
+                  // onChange={e =>
+                  //   this.dayChanged(e, lunchboq.name, lunchboq.id)
+                  // }
+                >
+                  <option>Friday's Lunchboq's</option>
+                  <option value='Restaurant Name'>Chopsticks</option>
+                  <option value='LunchBoq5'>LunchBoq1</option>
+                  <option value='Entree'>Entree</option>
+                  <option value='Side1'>Side1</option>
+                  <option value='Side2'>Side2</option>
+                </select>
+              </article>
+            </section>
           </section>
+          <h2>Look Good?</h2>
+          <button className='checkout-button'>Checkout</button>
         </section>
       </section>
       // </section>

@@ -266,7 +266,7 @@ class Menu extends Component {
           <h2>Ready to Make Midday Simple?</h2>
           <section className='order-button-container'>
             <button className='order-button' type='submit'>
-              Proceed to Checkout
+              Review Your Plan
             </button>
           </section>
           <footer />
