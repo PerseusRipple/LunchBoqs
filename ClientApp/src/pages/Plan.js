@@ -34,9 +34,19 @@ class Plan extends Component {
             </section>
           </section>
         </header>
-        <section>
-          <header className='logo-banner' />
-        </section>
+
+        <article className='logo-img'>
+          <Link to='/'>
+            <header className='logo-banner' />
+          </Link>
+        </article>
+
+        {/* <article className='logo-click'
+          <Link to='/'
+         
+        </Link>
+        </article> */}
+
         {/* <h1 className='calendar-header'>Your LunchBoqs</h1> */}
         <section className='restaurant-gallery'>
           <section className='scrolling-wrapper' id='box-shadow'>

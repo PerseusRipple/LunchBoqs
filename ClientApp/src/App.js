@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import Plan from './pages/Plan'
 import Pack from './pages/Pack'
 import Menu from './pages/Menu'
+import Checkout from './pages/Checkout'
 import './index.css'
 
 export default class App extends Component {
@@ -16,6 +17,7 @@ export default class App extends Component {
           <Route exact path='/plan' component={Plan} />
           <Route exact path='/pack' component={Pack} />
           <Route exact path='/menu/:restaurantId' component={Menu} />
+          <Route exact path='/checkout' component={Checkout} />
         </Switch>
       </Router>
     )

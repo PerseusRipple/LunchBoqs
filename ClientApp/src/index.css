@@ -507,7 +507,7 @@ section.container {
   background-position: center;
   background-size: cover;
   min-height: 10rem;
-  /* width: 100%; */
+  width: 100%;
   margin: 0;
 }
 
@@ -614,8 +614,10 @@ th {
   text-align: center;
 }
 
-.order.button {
+.order-button {
   text-align: center;
+  border: 0.25rem solid rgba(141, 133, 133);
+  border-radius: 5%;
 }
 
 /*Media Query for Calendar on Menu Page */
@@ -687,4 +689,28 @@ th {
   .menu-calendar {
     /* min-height: 24rem; */
   }
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(53, 48, 48);
+  min-height: 24rem;
+}
+
+.checkout-container h1 {
+  align-items: center;
+}
+
+.days-order {
+  display: block;
+  align-content: center;
+}
+
+.checkout-dropdown-container {
+  display: block;
+  justify-content: space-around;
+  align-content: flex-start;
+  margin-top: 6rem;
 }
