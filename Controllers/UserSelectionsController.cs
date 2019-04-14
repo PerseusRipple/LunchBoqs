@@ -4,6 +4,7 @@ using System.Linq;
 using lunchboqs;
 using LunchBoqs.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace LunchBoqs.Controllers
 {
@@ -26,7 +27,9 @@ namespace LunchBoqs.Controllers
     public ActionResult<IList<UserSelection>> GetAllUserSelectionForRestaurant()
     {
 
-      var results = db.UserSelections;
+      var results = db.UserSelections
+        .Include(i => i.LunchBoqs)
+        .ThenInclude(i => i.Restaurant);
       return results.ToList();
     }
 

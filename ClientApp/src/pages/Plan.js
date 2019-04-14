@@ -68,6 +68,9 @@ class Plan extends Component {
             })}
           </section>
         </section>
+        <section className='bottom-container-plan'>
+          <h2>Select a restaurant to see this week's LunchBoq Menu Board</h2>
+        </section>
       </section>
     )
   }

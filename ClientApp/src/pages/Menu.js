@@ -170,105 +170,114 @@ class Menu extends Component {
               })}
             </section>
           </section>
+          <section className='scrolling-wrapper-menu'>
+            <section className='calendar-container'>
+              <section className='calendar'>
+                <table>
+                  <thead>
+                    <tr className='days-rows'>
+                      <th />
+                      <th>Monday</th>
+                      <th>Tuesday</th>
+                      <th>Wednesday</th>
+                      <th>Thursday</th>
+                      <th>Friday</th>
+                    </tr>
+                  </thead>
 
-          <section className='calendar-container'>
-            <section className='calendar'>
-              <table>
-                <thead>
-                  <tr className='days-rows'>
-                    <th />
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr className='lunch-row' width='144' heigth='80'>
-                    <td>Lunch</td>
-                    <td>
-                      <span
-                        role='img'
-                        aira-label='this meal has been selected'
-                        style={{
-                          display: this.state.monday.lunch ? 'block' : 'none'
-                        }}
-                        onClick={() => this.removeDay('monday')}
-                      >
-                        🐸
-                      </span>
-                    </td>
-                    <td>
-                      <span
-                        role='img'
-                        aira-label='this meal has been selected'
-                        style={{
-                          display: this.state.tuesday.lunch ? 'block' : 'none'
-                        }}
-                        onClick={() => this.removeDay('tuesday')}
-                      >
-                        🐸
-                      </span>
-                    </td>
-                    <td>
-                      <span
-                        role='img'
-                        aira-label='this meal has been selected'
-                        style={{
-                          display: this.state.wednesday.lunch ? 'block' : 'none'
-                        }}
-                        onClick={() => this.removeDay('wednesday')}
-                      >
-                        🐸
-                      </span>
-                    </td>
-                    <td>
-                      <span
-                        role='img'
-                        aira-label='this meal has been selected'
-                        style={{
-                          display: this.state.thursday.lunch ? 'block' : 'none'
-                        }}
-                        onClick={() => this.removeDay('thursday')}
-                      >
-                        🐸
-                      </span>
-                    </td>
-                    <td>
-                      <span
-                        role='img'
-                        aira-label='this meal has been selected'
-                        style={{
-                          display: this.state.friday.lunch ? 'block' : 'none'
-                        }}
-                        onClick={() => this.removeDay('friday')}
-                      >
-                        🐸
-                      </span>
-                    </td>
-                  </tr>
-                  <tr className='snack-row'>
-                    <td>Snack</td>
-                    <td />
-                    <td />
-                    <td />
-                    <td />
-                    <td />
-                  </tr>
-                </tbody>
-              </table>
+                  <tbody>
+                    <tr className='lunch-row' width='144' heighth='80'>
+                      <td>Lunch</td>
+                      <td>
+                        <span
+                          role='img'
+                          aira-label='this meal has been selected'
+                          style={{
+                            display: this.state.monday.lunch ? 'block' : 'none'
+                          }}
+                          onClick={() => this.removeDay('monday')}
+                        >
+                          🐸
+                        </span>
+                      </td>
+                      <td>
+                        <span
+                          role='img'
+                          aira-label='this meal has been selected'
+                          style={{
+                            display: this.state.tuesday.lunch ? 'block' : 'none'
+                          }}
+                          onClick={() => this.removeDay('tuesday')}
+                        >
+                          🐸
+                        </span>
+                      </td>
+                      <td>
+                        <span
+                          role='img'
+                          aira-label='this meal has been selected'
+                          style={{
+                            display: this.state.wednesday.lunch
+                              ? 'block'
+                              : 'none'
+                          }}
+                          onClick={() => this.removeDay('wednesday')}
+                        >
+                          🐸
+                        </span>
+                      </td>
+                      <td>
+                        <span
+                          role='img'
+                          aira-label='this meal has been selected'
+                          style={{
+                            display: this.state.thursday.lunch
+                              ? 'block'
+                              : 'none'
+                          }}
+                          onClick={() => this.removeDay('thursday')}
+                        >
+                          🐸
+                        </span>
+                      </td>
+                      <td>
+                        <span
+                          role='img'
+                          aira-label='this meal has been selected'
+                          style={{
+                            display: this.state.friday.lunch ? 'block' : 'none'
+                          }}
+                          onClick={() => this.removeDay('friday')}
+                        >
+                          🐸
+                        </span>
+                      </td>
+                    </tr>
+                    <tr className='snack-row'>
+                      <td>Snack</td>
+                      <td />
+                      <td />
+                      <td />
+                      <td />
+                      <td />
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
             </section>
           </section>
         </section>
         <section className='bottom-container'>
           <h2>Ready to Make Midday Simple?</h2>
+
           <section className='order-button-container'>
-            <button className='order-button' type='submit'>
-              Review Your Plan
-            </button>
+            <Link to='/checkout' className='click-button'>
+              <button className='order-button' type='submit'>
+                Review Your Plan
+              </button>
+            </Link>
           </section>
+
           <footer />
         </section>
       </section>

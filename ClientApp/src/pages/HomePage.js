@@ -53,30 +53,9 @@ class HomePage extends Component {
           </section>
         </header>
 
-        {/* <a class='active' href='#home'>
-      Home
-    </a> */}
-        {
-          // <img
-          //   src='./images/logo_transparent.png'
-          //   alt='company logo'
-          //   width='130'
-          //   height='35'
-          // />
-        }
-
         <section className='main-banner'>
           <section className='container'>
             <section className='headline'>
-              <a href='#'>
-                {/* <img
-          scr='./images/logo.png'
-          alt='LOGO'
-          width='560'
-          height='560'
-        /> */}
-              </a>
-
               <h2>Keep Midday Simple.</h2>
             </section>
           </section>
@@ -90,11 +69,20 @@ class HomePage extends Component {
               className='hover-button'
               onMouseOver={this.planOnMouseOver}
             >
-              Look at the Restaurants
+              About
             </Link>
           </button>
-          <button onMouseOver={this.packOnMouseOver}>Pack</button>
-          <button onMouseOver={this.eatOnMouseOver}>Eat</button>
+
+          {/* <button onMouseOver={this.packOnMouseOver} /> */}
+          <button>
+            <Link
+              to='/plan'
+              className='hover-button'
+              onMouseOver={this.eatOnMouseOver}
+            >
+              Find Food
+            </Link>
+          </button>
         </section>
 
         <section className='info-container'>
@@ -110,34 +98,31 @@ class HomePage extends Component {
           >
             <p> LunchBoqs is more than a meal. It's your time delivered.</p>
           </article>
-
           <article
             className='plan-info'
             style={{ display: this.state.displayPlan ? 'block' : 'none' }}
           >
-            What's your lunch week look like?
+            Take the guesswork out of lunchtime. Every LunchBoqs is $7 and comes
+            with an entree and two sides. Best of all each LunchBoqs is crafted
+            from your favorite local restaurants. Plan for the day or the entire
+            week. Check in every Saturday for a new LunchBoqs Menu Board.
           </article>
-
           <article
             className='pack-info'
             style={{ display: this.state.displayPack ? 'block' : 'none' }}
           />
-
+          {/* This tells Users that they are about to see amazing restaurant options */}
           <article
             className='eat-info'
             style={{ display: this.state.displayEat ? 'block' : 'none' }}
           >
-            eat info stuff
+            This is where value meets fancy. See your local restaurants.
           </article>
         </section>
 
         {/* </section> */}
 
-        <section className='bottom-container' />
-
-        {/* <footer className='footer'>© LunchBoqs™ 2019</footer> */}
-        {/* <Plan />
-        <Pack /> */}
+        <footer className='footer'>© LunchBoqs™ 2019</footer>
       </section>
     )
   }
