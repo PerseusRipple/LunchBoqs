@@ -61,9 +61,15 @@ class Checkout extends Component {
             {this.state.selections.map((selection, i) => {
               console.log({ selection })
               return (
-                <article className='order-card' key={selection.id}>
-                  <button>selection {i + 1}</button>
-                  <p>{selection.dayOfWeek}</p>
+                <article className='menu-card' key={selection.id}>
+                  {/* <button>selection {i + 1}</button> */}
+                  <button className='weekday'>
+                    {/* {i + 1} */}
+                    {selection.dayOfWeek}
+                  </button>
+
+                  <p className='eats'> {selection.lunchBoqs.name}</p>
+
                   <p>{selection.lunchBoqs.entree}</p>
                   <p>{selection.lunchBoqs.side1}</p>
                   <p>{selection.lunchBoqs.side2}</p>

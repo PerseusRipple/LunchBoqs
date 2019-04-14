@@ -217,12 +217,6 @@ section.container {
   }
 }
 
-/* @media screen and (min-width: 768px) {
-  .main-banner {
-    height: 28rem;
-  }
-} */
-
 @media only screen and (min-width: 611px) {
   .selector-container {
     display: flex;
@@ -289,22 +283,6 @@ section.container {
   /* background-color: rgb(192, 175, 152); */
   background-color: rgb(226, 220, 213);
 }
-
-/* Footer */
-
-/* .bottom-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.footer {
-  diplay: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 20rem;
-  display: none;
-} */
 
 /* Media Queries for Bottom Container */
 @media only screen and (min-width: 768px) {
@@ -501,7 +479,7 @@ section.container {
 
 .bottom-container-plan h2 {
   font-size: 1.5rem;
-  color: rgb(236, 231, 231);
+  color: rgb(39, 36, 36);
 }
 
 /*Menu Page Header*/
@@ -653,7 +631,7 @@ th {
 
 .bottom-container h2 {
   font-size: 2rem;
-  color: rgb(236, 231, 231);
+  color: rgb(39, 36, 36);
 }
 
 .order-button-container {
@@ -749,14 +727,17 @@ h2 {
   border: 0.25rem solid black;
   border-radius: 5%;
   margin: 0.5rem;
-  padding: 0.75rem;
-  max-width: 14rem;
+  /* padding: 0.75rem; */
+  /* max-width: 14rem; */
+  /* max-height: inherit; */
 }
 
-.order-card button,
-p {
-  max-height: 4.5rem;
-  margin-bottom: 0.5rem;
+.weekday {
+  color: rgb(216, 112, 147);
+}
+
+.eats {
+  color: rgb(201, 190, 174);
 }
 
 .days-order {
@@ -799,7 +780,8 @@ p {
 
 .bottom-container-checkout h2 {
   font-size: 2rem;
-  color: rgb(236, 231, 231);
+  color: rgb(39, 36, 36);
+  padding: 2rem;
 }
 
 .checkout-button {
@@ -823,6 +805,10 @@ p {
 /*Pay Page*/
 
 .pay-page {
+  display: block;
+  /* justify-content: center;
+  align-content: center;
+  align-items: center; */
   font-family: 'Architects Daughter', cursive;
   font-size: 1.5rem;
   color: rgb(236, 231, 231);
@@ -834,7 +820,54 @@ p {
 }
 
 .pay-page h1,
-h2 {
+h2,
+p {
   text-align: center;
   padding: 1rem;
+}
+
+.pay-form {
+  padding-bottom: 1rem;
+  padding: 0.5rem;
+  align-content: space-evenly;
+  justify-content: center;
+}
+
+.pay-form label,
+input {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border-radius: 5%;
+}
+
+.love:hover {
+  background-color: rgb(216, 112, 147);
+  border-radius: 75%;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  padding: 0.75rem;
+  border: 0.5rem solid #999;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15rem #999;
+}
+
+.legend {
+  text-align: center;
+  float: left;
+  background: #999;
+  margin-top: -2rem;
+}
+
+.legend + * {
+  clear: both;
+}
+
+footer {
+  padding: 0.5rem;
+  text-align: center;
 }
