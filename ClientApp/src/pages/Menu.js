@@ -31,7 +31,6 @@ class Menu extends Component {
     lunchboqs: []
   }
 
-  //meal day changed
   dayChanged = (event, meal, lunchboqsId) => {
     console.log('thing was change', event.target.value, 'for ', meal)
     const dayOfWeek = event.target.value
@@ -87,9 +86,7 @@ class Menu extends Component {
       })
     axios.get('/api/userselections/').then(resp => {
       console.log(resp)
-      // covert the array resp.data to the object we need in state
       const alreadySelectedMeals = {}
-      // loop over the array
       resp.data.forEach(selection => {
         alreadySelectedMeals[selection.dayOfWeek] = {
           lunch: selection.lunchBoqsId
