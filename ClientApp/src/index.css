@@ -16,6 +16,10 @@ body {
   min-height: 100%;
 }
 
+h2 {
+  font-family: 'Martel', serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -273,9 +277,16 @@ section.container {
   font-size: 1.5rem;
   /* background-color: rgb(192, 175, 152); */
   background-color: rgb(226, 220, 213);
-  height: inherit;
+  height: 35rem;
+}
+.info-container article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
+.info-container p,
 .plan-info p {
   justify-content: center;
   text-align: left;

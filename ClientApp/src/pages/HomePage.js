@@ -32,6 +32,22 @@ class HomePage extends Component {
     })
   }
 
+  planOnMouseLeave = () => {
+    this.setState({
+      displayPlan: false,
+      displayPack: false,
+      displayEat: false
+    })
+  }
+
+  packOnMouseLeave = () => {
+    this.setState({
+      displayPlan: false,
+      displayPack: false,
+      displayEat: false
+    })
+  }
+
   render() {
     return (
       <section>
@@ -63,23 +79,27 @@ class HomePage extends Component {
 
         {/* <section className='flex-container'>  */}
         <section className='selector-container'>
-          <button>
-            <Link
-              to='/plan'
-              className='hover-button'
-              onMouseOver={this.planOnMouseOver}
-            >
+          {/* <a
+            href='/plan'
+            className='hover-button'
+            onMouseOver={this.planOnMouseOver}
+          >
+            About
+          </a> */}
+
+          <button
+            onMouseOver={this.planOnMouseOver}
+            onMouseLeave={this.planOnMouseLeave}
+          >
+            <Link to='/plan' className='hover-button'>
               About
             </Link>
           </button>
-
-          {/* <button onMouseOver={this.packOnMouseOver} /> */}
-          <button>
-            <Link
-              to='/plan'
-              className='hover-button'
-              onMouseOver={this.eatOnMouseOver}
-            >
+          <button
+            onMouseOver={this.eatOnMouseOver}
+            onMouseLeave={this.packOnMouseLeave}
+          >
+            <Link to='/plan' className='hover-button'>
               Find Food
             </Link>
           </button>
@@ -99,7 +119,6 @@ class HomePage extends Component {
             <p> LunchBoqs is more than a meal. It's your time delivered.</p>
           </article>
           <article
-            className='plan-info'
             style={{ display: this.state.displayPlan ? 'block' : 'none' }}
           >
             <p> Join LunchBoqs and take the guesswork out of lunchtime.</p>{' '}
@@ -109,7 +128,6 @@ class HomePage extends Component {
               restaurants.
             </p>
             <p>
-              {' '}
               Plan for the day or the entire week. Check in every Saturday for a
               new LunchBoqs Menu Board.
             </p>
@@ -123,7 +141,7 @@ class HomePage extends Component {
             className='eat-info'
             style={{ display: this.state.displayEat ? 'block' : 'none' }}
           >
-            This is where value meets fancy. See your local restaurants.
+            <p>This is where value meets fancy. See your local restaurants.</p>
           </article>
         </section>
       </section>
