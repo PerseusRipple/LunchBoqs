@@ -699,6 +699,9 @@ th {
   .restaurant-logo {
     min-height: 14rem;
   }
+  .calendar {
+    justify-content: center;
+  }
 }
 
 /* Checkout Page*/
