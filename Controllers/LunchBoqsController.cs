@@ -51,16 +51,24 @@ namespace LunchBoqs.Controllers
 
     //Delete
     [HttpDelete("{id}")]
-    public ActionResult DeleteLunchBoq(int id)
+    public ActionResult DeleteLunchBoqs(int id)
     {
-      var restaurant = db.LunchBoqs.FirstOrDefault(f => f.Id == id);
-
+      var lunchboq = db.LunchBoqs.FirstOrDefault(f => f.Id == id);
+      db.LunchBoqs.Remove(lunchboq);
       db.SaveChanges();
       return Ok();
     }
   }
-
 }
+// public ActionResult DeleteLunchBoq(int id)
+// {
+//   var restaurant = db.LunchBoqs.FirstOrDefault(f => f.Id == id);
+
+
+// }
+
+
+
 
 
 
