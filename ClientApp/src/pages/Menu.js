@@ -170,8 +170,9 @@ class Menu extends Component {
               })}
             </section>
           </section>
-          <section className='scrolling-wrapper-menu'>
-            <section className='calendar-container'>
+
+          <section className='calendar-container'>
+            <section className='scrolling-wrapper-menu'>
               <section className='calendar'>
                 <table>
                   <thead>

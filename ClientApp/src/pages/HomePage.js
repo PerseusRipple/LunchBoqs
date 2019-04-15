@@ -102,7 +102,7 @@ class HomePage extends Component {
             className='plan-info'
             style={{ display: this.state.displayPlan ? 'block' : 'none' }}
           >
-            Join LunchBoqs and take the guesswork out of lunchtime.{' '}
+            <p> Join LunchBoqs and take the guesswork out of lunchtime.</p>{' '}
             <p>
               Each meal is $7 and comes with an entree and two sides. Best of
               all every LunchBoqs is crafted from your favorite local
@@ -126,10 +126,6 @@ class HomePage extends Component {
             This is where value meets fancy. See your local restaurants.
           </article>
         </section>
-
-        {/* </section> */}
-        {/* 
-        <footer className='footer'>© LunchBoqs™ 2019</footer> */}
       </section>
     )
   }

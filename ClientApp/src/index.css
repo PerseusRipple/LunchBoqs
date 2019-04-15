@@ -166,7 +166,6 @@ section.container {
 /* Selector Container */
 .selector-container {
   display: block;
-
   text-align: center;
   background-color: #e9e9e9;
   width: 100%;
@@ -228,6 +227,7 @@ section.container {
     align-content: space-around;
     text-align: center;
     width: 100%;
+    margin-left: 0.75rem;
     /* margin-top: 0.25rem; */
     padding: 0.9rem;
   }
@@ -244,9 +244,10 @@ section.container {
   .selector-container button {
     float: none;
     /* display: flex; */
-    align-content: space-evenly;
+    align-content: space-around;
     text-align: center;
     width: 100%;
+    margin-left: 0.75rem;
     /* margin-top: 0.25rem; */
     padding: 0.9rem;
   }
@@ -273,15 +274,19 @@ section.container {
 
 .info-container {
   display: flex;
-  justify-content: center;
-  text-align: center;
   margin: 0;
   padding: 0.5rem;
-  min-height: 16rem;
+  /* min-height: 16rem; */
   font-family: 'Martel', serif;
   font-size: 1.5rem;
   /* background-color: rgb(192, 175, 152); */
   background-color: rgb(226, 220, 213);
+  height: inherit;
+}
+
+.plan-info p {
+  justify-content: center;
+  text-align: left;
 }
 
 /* Media Queries for Bottom Container */
@@ -822,6 +827,7 @@ h2 {
 .pay-page h1,
 h2,
 p {
+  /* flex-wrap: wrap; */
   text-align: center;
   padding: 1rem;
 }
@@ -840,16 +846,21 @@ input {
   border-radius: 5%;
 }
 
+.love {
+  border-radius: 75%;
+}
+
 .love:hover {
   background-color: rgb(216, 112, 147);
-  border-radius: 75%;
+  animation-direction: alternate;
 }
 
 fieldset {
   display: flex;
   justify-content: space-around;
-  margin-top: 1rem;
-  padding-top: 0.75rem;
+  margin-top: 2rem;
+  margin: 0.75rem;
+  padding-top: 1rem;
   padding: 0.75rem;
   border: 0.5rem solid #999;
   border-radius: 0.5rem;

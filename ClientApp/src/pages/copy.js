@@ -80,3 +80,11 @@ toggle between hiding and showing the dropDown content */
 /* .show {
   display: block;
 } */
+
+{
+  /* </section> */
+}
+{
+  /* 
+        <footer className='footer'>© LunchBoqs™ 2019</footer> */
+}

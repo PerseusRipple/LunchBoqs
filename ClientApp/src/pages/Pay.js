@@ -44,7 +44,6 @@ class Pay extends Component {
               name='name'
               placeholder='SDG, Cohort xiii'
             />
-            <input type='submit' value='Love' className='love' />
           </form>
           {/* <form action='post' className='pay-form'> */}
           <fieldset>
@@ -81,13 +80,18 @@ class Pay extends Component {
             </p>
           </fieldset>
           <fieldset>
-            <legend className='legend'>Give credit where credit is due</legend>
+            <legend className='legend'>Attributions</legend>
             <p>Logo design from: hatchful.shopify.com </p>
             <p>Restaurant images from: www.freepik.com and www.Vecteezy.com</p>
           </fieldset>
         </section>
         <footer>
-          Website made with much <big>🧡</big> by Shantell Smithson
+          {' '}
+          Website made with
+          <Link to='/'>
+            <button className='love'>love</button>
+          </Link>{' '}
+          by Shantell Smithson
         </footer>
       </section>
     )
