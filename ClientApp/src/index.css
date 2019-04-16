@@ -958,6 +958,7 @@ label {
   background-color: rgb(226, 220, 213);
   width: 100%;
   height: inherit;
+  min-height: 50rem;
 }
 
 @media screen and (max-width: 600px) {
