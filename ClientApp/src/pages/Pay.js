@@ -50,31 +50,27 @@ class Pay extends Component {
             <legend className='legend'>
               Thank You for investing in my future!
             </legend>
-            <input type='radio' name='radio' id='radio' />
-            <label for='radio'>Full Stack Talent</label>
-            <input type='radio' name='radio' id='radio' />
-            <label for='radio'>Haneke Design</label>
-            <input type='radio' name='radio' id='radio' />
-            <label for='radio'>Suncoast Developers Guild</label>
+            <ul>
+              <li>♡ Full Stack Talent</li>
+              <li>♡ Haneke Design</li>
+              <li>♡ Suncoast Developers Guild</li>
+            </ul>
           </fieldset>
           <fieldset>
             <legend className='legend'>Without Love Nothing is Possible</legend>
-            <input type='radio' name='radio' id='radio' />
-            <label for='radio'>Thanks, Dad 🐣</label>
-            <input type='radio' name='radio' id='radio' />
-            <label for='radio'>Thank you, Mom and Troy</label>
-            {/* <input type='radio' name='radio' id='radio' />
-            <label for='radio'>Suncoast Developers Guild</label> */}
+            <ul>
+              <li>♡ Thanks, Dad 🐣</li>
+              <li>♡ Thank you, Mom and Troy</li>
+            </ul>
           </fieldset>
-          {/* </form> */}
+
           <fieldset>
             <legend className='legend'>And a Very Special Thanks to...</legend>
-            <input type='radio' name='radio' id='radio' />
-            <label for='radio'>Katherine Trammell</label>
-            <input type='radio' name='radio' id='radio' />
-            <label for='radio'>Gavin Stark</label>
-            <input type='radio' name='radio' id='radio' />
-            <label for='radio'>Mark Dewey</label>
+            <ul>
+              <li>♡ Katherine Trammell</li>
+              <li>♡ Gavin Stark</li>
+              <li>♡ Mark Dewey</li>
+            </ul>
             <p>
               Mark, you inspire me to be a better programmer and to help others
               strengthen their craft. I could not have completed my project

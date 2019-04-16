@@ -345,22 +345,30 @@ section.container {
     margin: 0;
     /* padding: 0.9rem; */
   }
-
-  .top-plan input[type='text'] {
-    border: 0.1rem solid #ccc;
-  }
-
-  .top-plan .login-container-plan img {
-    float: none;
-    align-content: left;
-    /* margin-left: 33%; */
-    /* width: auto; */
-  }
-  .logo-banner {
-    min-height: 2rem;
-  }
+}
+.login-btn-plan {
+  visibility: hidden;
 }
 
+.top-plan input[type='text'] {
+  border: 0.1rem solid #ccc;
+}
+
+.top-plan .login-container-plan img {
+  float: none;
+  align-content: left;
+  /* margin-left: 33%; */
+  /* width: auto; */
+}
+.logo-banner {
+  min-height: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .login-btn-plan {
+    visibility: hidden;
+  }
+}
 @media only screen and (min-width: 600px) {
   .top-plan a,
   .top-plan input,
@@ -371,6 +379,9 @@ section.container {
     width: 100%;
     margin: 0;
     /* padding: 1rem; */
+  }
+  .login-btn-plan {
+    visibility: hidden;
   }
   .logo-banner {
     min-height: 2rem;
@@ -391,20 +402,23 @@ section.container {
     width: 100%;
     margin: 0;
   }
+}
+.login-btn-plan {
+  visibility: hidden;
+}
 
-  .top-plan input[type='text'] {
-    border: 0.1rem solid #ccc;
-  }
+.top-plan input[type='text'] {
+  border: 0.1rem solid #ccc;
+}
 
-  .top-plan.logo {
-    display: block;
-    align-content: left;
-    /* margin-left: 33%; */
-    /* width: auto; */
-  }
-  .login-btn-plan {
-    min-height: 3rem;
-  }
+.top-plan.logo {
+  display: block;
+  align-content: left;
+  /* margin-left: 33%; */
+  /* width: auto; */
+}
+.login-btn-plan {
+  min-height: 3rem;
 }
 
 .logo-banner {
@@ -422,6 +436,21 @@ section.container {
   }
   .logo-banner {
     min-height: 10rem;
+  }
+}
+.login-btn-plan {
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+  .login-btn-plan {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .login-btn-plan {
+    visibility: hidden;
   }
 }
 
@@ -564,7 +593,20 @@ h2 {
 }
 
 .days {
+  align-items: center;
+  background-color: rgb(248, 248, 248);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(166, 166, 166);
+  border-image: initial;
+  color: black;
+  cursor: pointer;
+  box-sizing: border-box;
   margin: 0.5rem;
+  white-space: pre;
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+  -webkit-rtl-ordering: logical;
 }
 
 /* Calendar on Menu Page */
@@ -656,9 +698,6 @@ th {
 /*Media Query for Calendar on Menu Page */
 
 @media screen and (max-width: 600px) {
-  .restaurant-gallery {
-    /* max-height: 27rem; */
-  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -667,8 +706,12 @@ th {
     margin-top: 1rem;
   }
 
+  @media only screen and (max-width: 992px) {
+  }
+
   @media only screen and (min-width: 1024px) {
   }
+
   .seafoodMenu-img img {
     margin-top: 8.3rem;
   }
@@ -676,6 +719,9 @@ th {
   th {
     padding: 0.5rem;
   }
+}
+
+@media only screen and (min-width: 1440px) {
 }
 
 /*Media Query for Menu Page */
@@ -884,7 +930,60 @@ fieldset {
   clear: both;
 }
 
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
 footer {
   padding: 0.5rem;
+  text-align: center;
+}
+
+label {
+  padding: 1rem;
+  text-rendering: circle;
+}
+
+.mid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem;
+  /* min-height: 16rem; */
+  font-family: 'Martel', serif;
+  font-size: 1.5rem;
+  /* background-color: rgb(192, 175, 152); */
+  background-color: rgb(226, 220, 213);
+  width: 100%;
+  height: inherit;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    overflow: hidden;
+  }
+}
+
+.log-page-btn {
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  text-decoration-color: rgb(0, 0, 0);
+  border: 0.1rem solid #ccc;
+  border-radius: 5%;
+  margin: 1rem;
+  margin-left: 10rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+
+  font-size: 1.5rem;
+}
+
+.form-container p {
   text-align: center;
 }

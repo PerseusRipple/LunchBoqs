@@ -55,7 +55,13 @@ class HomePage extends Component {
           <section className='topnav'>
             <section className='login-container'>
               <button className='login' type='submit'>
-                Log In
+                <Link
+                  to='/LogIn'
+                  className='hover-button'
+                  style={{ display: 'block', height: '100%' }}
+                >
+                  Log In
+                </Link>
               </button>
 
               <button className='signUp' type='submit'>
@@ -132,9 +138,8 @@ class HomePage extends Component {
             <p>LunchBoqs takes the guesswork out of lunchtime.</p>{' '}
             <p> Plan for the day or the entire week.</p>
             <p>
-              Each meal is $5 and comes with an entree and two sides. Best of
-              all every LunchBoqs is crafted from your favorite local
-              restaurants.
+              Every meal is $5 and comes with an entree and two sides. Best of
+              all, each LunchBoqs is crafted from a local restaurant.
             </p>
             {/* Plan for the day or the entire week. Check in every Saturday for a
               new LunchBoqs Menu Board. */}
