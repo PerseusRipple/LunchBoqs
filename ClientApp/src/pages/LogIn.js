@@ -26,20 +26,25 @@ class LogIn extends Component {
         <section className='mid-container'>
           <section className='form-container'>
             <form action='' method='get' className='pay-form'>
-              <label for='Get-name'> UserName:</label>
-              <input
-                type='text'
-                id='Get-name'
-                name='name'
-                placeholder='username'
-              />
+              <div className='form-item'>
+                <label for='Get-name'> UserName:</label>
+                <input
+                  type='text'
+                  id='Get-name'
+                  name='name'
+                  placeholder='username'
+                />
+              </div>
+              <div className='form-item'>
+                <label for='name'>Password:</label>
+                <input
+                  type='text'
+                  id='name'
+                  name='name'
+                  placeholder='Password'
+                />
+              </div>
             </form>
-
-            <form action='post' className='pay-form'>
-              <label for='name'>Password:</label>
-              <input type='text' id='name' name='name' placeholder='Password' />
-            </form>
-
             <button className='log-page-btn'>
               <Link
                 to='/plan'

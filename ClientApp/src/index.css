@@ -978,9 +978,9 @@ label {
   border: 0.1rem solid #ccc;
   border-radius: 5%;
   margin: 1rem;
-  margin-left: 10rem;
+  /* margin-left: 10rem;
   padding-left: 6rem;
-  padding-right: 6rem;
+  padding-right: 6rem; */
 
   font-size: 1.5rem;
 }
@@ -988,6 +988,12 @@ label {
 .log-page-btn:hover {
   background-color: #ccc;
   color: rgb(216, 112, 147);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .form-container p,
