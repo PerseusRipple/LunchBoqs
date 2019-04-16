@@ -25,7 +25,7 @@ class Join extends Component {
         <section className='selector-container' />
         <section className='mid-container'>
           <section className='form-container'>
-            <h2>Your inner frog thanks you</h2>
+            <h2 className='cheer'>Your inner frog thanks you</h2>
             <form action='' method='get' className='pay-form'>
               <div className='form-item'>
                 <label for='Get-name'> UserName:</label>

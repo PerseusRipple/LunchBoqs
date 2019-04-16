@@ -999,6 +999,9 @@ label {
 .form-container p,
 h2 {
   text-align: center;
+}
+
+.cheer {
   color: rgb(53, 48, 48);
 }
 
