@@ -8,6 +8,7 @@ import Menu from './pages/Menu'
 import Checkout from './pages/Checkout'
 import Pay from './pages/Pay'
 import LogIn from './pages/LogIn'
+import Join from './pages/Join'
 import './index.css'
 
 export default class App extends Component {
@@ -21,7 +22,8 @@ export default class App extends Component {
           <Route exact path='/menu/:restaurantId' component={Menu} />
           <Route exact path='/checkout' component={Checkout} />
           <Route exact path='/pay' component={Pay} />
-          <Route exact patch='/login' component={LogIn} />
+          <Route exact path='/login' component={LogIn} />
+          <Route exact path='/join' component={Join} />
         </Switch>
       </Router>
     )

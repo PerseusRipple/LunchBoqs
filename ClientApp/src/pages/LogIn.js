@@ -57,8 +57,7 @@ class LogIn extends Component {
 
             <p>
               Not a member?
-              <a href='/'>
-                {' '}
+              <a href='/Join'>
                 <br />
                 Join here
               </a>

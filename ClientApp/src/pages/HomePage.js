@@ -65,7 +65,13 @@ class HomePage extends Component {
               </button>
 
               <button className='signUp' type='submit'>
-                Sign Up
+                <Link
+                  to='/Join'
+                  className='hover-button'
+                  style={{ display: 'block', height: '100%' }}
+                >
+                  Sign Up
+                </Link>
               </button>
               {/* <form action='/action_page.php'>
       <input type='text' placeholder='Username' name='username' />

@@ -947,7 +947,9 @@ label {
 
 .mid-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0.5rem;
@@ -969,8 +971,6 @@ label {
 
 .log-page-btn {
   justify-content: center;
-  justify-items: center;
-  align-content: center;
   align-items: center;
   text-align: center;
   text-decoration: none;
@@ -985,6 +985,33 @@ label {
   font-size: 1.5rem;
 }
 
-.form-container p {
+.log-page-btn:hover {
+  background-color: #ccc;
+  color: rgb(216, 112, 147);
+}
+
+.form-container p,
+h2 {
   text-align: center;
+  color: rgb(53, 48, 48);
+}
+
+.pay-form label,
+input {
+  align-items: center;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form-item label {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.form-item input {
+  margin: 1rem;
 }
