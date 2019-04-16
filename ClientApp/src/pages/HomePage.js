@@ -91,7 +91,11 @@ class HomePage extends Component {
             onMouseOver={this.planOnMouseOver}
             onMouseLeave={this.planOnMouseLeave}
           >
-            <Link to='/plan' className='hover-button'>
+            <Link
+              to='/plan'
+              className='hover-button'
+              style={{ display: 'block', height: '100%' }}
+            >
               About
             </Link>
           </button>
@@ -99,7 +103,11 @@ class HomePage extends Component {
             onMouseOver={this.eatOnMouseOver}
             onMouseLeave={this.packOnMouseLeave}
           >
-            <Link to='/plan' className='hover-button'>
+            <Link
+              to='/plan'
+              className='hover-button'
+              style={{ display: 'block', height: '100%' }}
+            >
               Find Food
             </Link>
           </button>
@@ -121,16 +129,15 @@ class HomePage extends Component {
           <article
             style={{ display: this.state.displayPlan ? 'block' : 'none' }}
           >
-            <p> Join LunchBoqs and take the guesswork out of lunchtime.</p>{' '}
+            <p>LunchBoqs takes the guesswork out of lunchtime.</p>{' '}
+            <p> Plan for the day or the entire week.</p>
             <p>
-              Each meal is $7 and comes with an entree and two sides. Best of
+              Each meal is $5 and comes with an entree and two sides. Best of
               all every LunchBoqs is crafted from your favorite local
               restaurants.
             </p>
-            <p>
-              Plan for the day or the entire week. Check in every Saturday for a
-              new LunchBoqs Menu Board.
-            </p>
+            {/* Plan for the day or the entire week. Check in every Saturday for a
+              new LunchBoqs Menu Board. */}
           </article>
           <article
             className='pack-info'
@@ -141,7 +148,11 @@ class HomePage extends Component {
             className='eat-info'
             style={{ display: this.state.displayEat ? 'block' : 'none' }}
           >
-            <p>This is where value meets fancy. See your local restaurants.</p>
+            <p>
+              This is where value meets fancy. See what your favorite
+              restaurants have boxed up for you.
+            </p>
+            <p>Check back every Saturday for a new LunchBoqs Menu Board.</p>
           </article>
         </section>
       </section>

@@ -60,8 +60,8 @@ class Plan extends Component {
                       width='180'
                       height='180'
                     />
-                    {/* {restaurant.name}
-                    {restaurant.id} */}
+                    {restaurant.name}
+                    {restaurant.id}
                   </Link>
                 </article>
               )

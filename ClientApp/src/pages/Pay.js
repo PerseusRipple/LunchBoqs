@@ -70,13 +70,15 @@ class Pay extends Component {
           <fieldset>
             <legend className='legend'>And a Very Special Thanks to...</legend>
             <input type='radio' name='radio' id='radio' />
+            <label for='radio'>Katherine Trammell</label>
+            <input type='radio' name='radio' id='radio' />
             <label for='radio'>Gavin Stark</label>
             <input type='radio' name='radio' id='radio' />
             <label for='radio'>Mark Dewey</label>
             <p>
-              Mark, you inspire me to be a better programmer if only to help
-              others strengthen their craft. I could not have completed my
-              project without you.
+              Mark, you inspire me to be a better programmer and to help others
+              strengthen their craft. I could not have completed my project
+              without you.
             </p>
           </fieldset>
           <fieldset>
