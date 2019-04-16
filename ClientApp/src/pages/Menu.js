@@ -34,16 +34,18 @@ class Menu extends Component {
   dayChanged = (event, meal, lunchboqsId) => {
     console.log('thing was change', event.target.value, 'for ', meal)
     const dayOfWeek = event.target.value
-    axios
-      .post('/api/userselections/', {
-        dayOfWeek: dayOfWeek,
-        lunchboqsId: lunchboqsId
-      })
-      .then(resp => {
-        this.setState({
-          [dayOfWeek]: { lunch: meal }
+    if (dayOfWeek) {
+      axios
+        .post('/api/userselections/', {
+          dayOfWeek: dayOfWeek,
+          lunchboqsId: lunchboqsId
         })
-      })
+        .then(resp => {
+          this.setState({
+            [dayOfWeek]: { lunch: meal }
+          })
+        })
+    }
   }
 
   removeDay = day => {
@@ -151,17 +153,6 @@ class Menu extends Component {
                       <option value='thursday'>Thursday</option>
                       <option value='friday'>Friday</option>
                     </select>
-                    {/* <select
-                      className='times'
-                      onChange={e => this.timeChanged(e, lunchboq.name)}
-                    >
-                      <option>Choose the time</option>
-                      <option value='noon'>Noon</option>
-                      <option value='12:30'>12:30pm</option>
-                      <option value='1:00'>1:00pm</option>
-                      <option value='1:30'>1:30pm</option>
-                      <option value='2:00'>2:00pm</option>
-                    </select> */}
                   </article>
                 )
               })}
